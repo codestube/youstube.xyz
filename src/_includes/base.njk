@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="{{ description or 'Developer Portfolio and CTF Writeups' }}">
+    <title>{{ title or 'Youstube' }}</title>
+    <link rel="stylesheet" href="/styles/styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="/" class="logo">Youstube</a>
+            <ul class="nav-links">
+                <li><a href="/">Profile</a></li>
+                <li><a href="/writeups/">Writeups</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        {{ content | safe }}
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Youstube. All rights reserved.</p>
+    </footer>
+
+    <script src="/scripts/script.js"></script>
+</body>
+</html>

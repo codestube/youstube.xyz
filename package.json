@@ -1,0 +1,16 @@
+{
+  "name": "youstube-portfolio",
+  "version": "1.0.0",
+  "description": "Developer portfolio and CTF writeups",
+  "scripts": {
+    "build": "eleventy",
+    "serve": "eleventy --serve",
+    "start": "eleventy --serve"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@11ty/eleventy": "^2.0.1"
+  }
+}
