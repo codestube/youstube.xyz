@@ -1,0 +1,175 @@
+---
+layout: base.njk
+title: Terminal - youstube
+description: Interactive terminal interface
+---
+
+<section>
+    <h1>Terminal Interface</h1>
+    <p>Type commands to explore. Try 'help' to see available commands.</p>
+    
+    <div class="terminal-container">
+        <div class="terminal-header">
+            <div class="terminal-buttons">
+                <span class="terminal-button close"></span>
+                <span class="terminal-button minimize"></span>
+                <span class="terminal-button maximize"></span>
+            </div>
+            <div class="terminal-title">youstube@terminal:~</div>
+        </div>
+        
+        <div class="terminal-output" id="terminal-output">
+            <div class="terminal-line">Welcome to youstube's terminal interface!</div>
+            <div class="terminal-line">Type 'help' to see available commands.</div>
+            <div class="terminal-line" style="margin-top: 1rem;"></div>
+        </div>
+        
+        <div class="terminal-input-line">
+            <span class="terminal-prompt">youstube@terminal:~$</span>
+            <input type="text" id="terminal-input" autofocus autocomplete="off" spellcheck="false">
+        </div>
+    </div>
+</section>
+
+<script>
+const terminalInput = document.getElementById('terminal-input');
+const terminalOutput = document.getElementById('terminal-output');
+
+const commands = {
+    help: {
+        description: 'Show available commands',
+        action: () => {
+            return `Available commands:
+  help       - Show this help message
+  about      - Display information about me
+  skills     - List my technical skills
+  projects   - Show my projects
+  contact    - Get my contact information
+  social     - Show social media links
+  clear      - Clear the terminal
+  whoami     - Display current user
+  date       - Show current date and time
+  echo       - Echo back the input`;
+        }
+    },
+    about: {
+        description: 'Display information about me',
+        action: () => {
+            return `Name: youstube
+Role: Developer & Security Enthusiast
+Focus: Web Development, Cybersecurity, CTF Challenges
+
+I'm passionate about creating efficient software solutions
+and exploring security vulnerabilities through CTF competitions.`;
+        }
+    },
+    skills: {
+        description: 'List technical skills',
+        action: () => {
+            return `Technical Skills:
+  Frontend:  JavaScript, React, HTML/CSS
+  Backend:   Node.js, Python, REST APIs
+  Database:  MongoDB, PostgreSQL
+  DevOps:    Docker, CI/CD, Git
+  Security:  Web Security, CTF, Penetration Testing`;
+        }
+    },
+    projects: {
+        description: 'Show projects',
+        action: () => {
+            return `Projects:
+  1. Portfolio Website - Lightweight developer portfolio
+  2. Web Application - Full-stack app with real-time features
+  3. API Development - RESTful API with authentication
+  
+Visit /writeups/ for CTF writeups and challenges.`;
+        }
+    },
+    contact: {
+        description: 'Get contact information',
+        action: () => {
+            return `Contact Information:
+  Email:   hello@youstube.xyz
+  GitHub:  github.com/codestube
+  Twitter: twitter.com/youstube`;
+        }
+    },
+    social: {
+        description: 'Show social media links',
+        action: () => {
+            return `Social Links:
+  GitHub:  https://github.com/codestube
+  Twitter: https://twitter.com/youstube`;
+        }
+    },
+    clear: {
+        description: 'Clear the terminal',
+        action: () => {
+            terminalOutput.innerHTML = '';
+            return null;
+        }
+    },
+    whoami: {
+        description: 'Display current user',
+        action: () => 'youstube'
+    },
+    date: {
+        description: 'Show current date and time',
+        action: () => new Date().toString()
+    },
+    echo: {
+        description: 'Echo back the input',
+        action: (args) => args.join(' ')
+    }
+};
+
+function processCommand(input) {
+    const parts = input.trim().split(' ');
+    const command = parts[0].toLowerCase();
+    const args = parts.slice(1);
+    
+    const line = document.createElement('div');
+    line.className = 'terminal-line';
+    line.innerHTML = `<span class="terminal-prompt">youstube@terminal:~$</span> ${input}`;
+    terminalOutput.appendChild(line);
+    
+    if (command === '') {
+        return;
+    }
+    
+    if (commands[command]) {
+        const result = commands[command].action(args);
+        if (result !== null) {
+            const resultLine = document.createElement('div');
+            resultLine.className = 'terminal-line command-result';
+            resultLine.style.whiteSpace = 'pre-wrap';
+            resultLine.textContent = result;
+            terminalOutput.appendChild(resultLine);
+        }
+    } else {
+        const errorLine = document.createElement('div');
+        errorLine.className = 'terminal-line error-text';
+        errorLine.textContent = `Command not found: ${command}. Type 'help' for available commands.`;
+        terminalOutput.appendChild(errorLine);
+    }
+    
+    const spacer = document.createElement('div');
+    spacer.className = 'terminal-line';
+    spacer.style.marginTop = '1rem';
+    terminalOutput.appendChild(spacer);
+    
+    terminalOutput.scrollTop = terminalOutput.scrollHeight;
+}
+
+terminalInput.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter') {
+        const input = terminalInput.value;
+        processCommand(input);
+        terminalInput.value = '';
+    }
+});
+
+document.querySelector('.terminal-container').addEventListener('click', () => {
+    terminalInput.focus();
+});
+</script>
