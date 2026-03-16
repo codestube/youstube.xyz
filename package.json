@@ -12,5 +12,9 @@
   "license": "MIT",
   "devDependencies": {
     "@11ty/eleventy": "^3.1.2"
+  },
+  "dependencies": {
+    "jquery": "^4.0.0",
+    "jquery.terminal": "^2.45.2"
   }
 }
