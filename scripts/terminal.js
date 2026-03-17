@@ -1,4 +1,9 @@
 $(document).ready(function() {
+    // Only initialize terminal if element exists
+    if ($('#terminal').length === 0) {
+        return;
+    }
+    
     const commands = {
         help: function() {
             this.echo('Available commands:\n');
