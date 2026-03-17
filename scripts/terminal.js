@@ -1,0 +1,105 @@
+$(document).ready(function() {
+    const commands = {
+        help: function() {
+            this.echo('Available commands:\n');
+            this.echo('  [[b;#58a6ff;]help]       - Show this help message');
+            this.echo('  [[b;#58a6ff;]about]      - Display information about me');
+            this.echo('  [[b;#58a6ff;]skills]     - List my technical skills');
+            this.echo('  [[b;#58a6ff;]projects]   - Show my projects');
+            this.echo('  [[b;#58a6ff;]contact]    - Get my contact information');
+            this.echo('  [[b;#58a6ff;]social]     - Show social media links');
+            this.echo('  [[b;#58a6ff;]writeups]   - View CTF writeups and blog posts');
+            this.echo('  [[b;#58a6ff;]profile]    - Visit full profile page');
+            this.echo('  [[b;#58a6ff;]whoami]     - Display current user');
+            this.echo('  [[b;#58a6ff;]date]       - Show current date and time');
+            this.echo('  [[b;#58a6ff;]clear]      - Clear the terminal\n');
+        },
+        about: function() {
+            this.echo('[[b;#f778ba;]youstube]');
+            this.echo('=====================================');
+            this.echo('Developer, Security Enthusiast, Problem Solver\n');
+            this.echo('I\'m passionate about creating efficient, scalable,');
+            this.echo('and maintainable software solutions. I love tackling');
+            this.echo('complex challenges and turning them into elegant solutions.\n');
+            this.echo('Interests:');
+            this.echo('  • Full-stack Development');
+            this.echo('  • Cybersecurity & CTF Competitions');
+            this.echo('  • Open Source Contribution');
+            this.echo('  • System Architecture & Design\n');
+        },
+        skills: function() {
+            this.echo('[[b;#f778ba;]Technical Skills]');
+            this.echo('=====================================\n');
+            this.echo('[[b;#58a6ff;]Languages:]');
+            this.echo('  JavaScript/TypeScript, Python, Java, Go, C/C++\n');
+            this.echo('[[b;#58a6ff;]Frontend:]');
+            this.echo('  React, Vue.js, HTML5, CSS3, Tailwind CSS\n');
+            this.echo('[[b;#58a6ff;]Backend:]');
+            this.echo('  Node.js, Express, Django, Flask, Spring Boot\n');
+            this.echo('[[b;#58a6ff;]DevOps & Tools:]');
+            this.echo('  Docker, Kubernetes, Git, CI/CD, Linux\n');
+            this.echo('[[b;#58a6ff;]Security:]');
+            this.echo('  Web Security, Cryptography, Penetration Testing\n');
+        },
+        projects: function() {
+            this.echo('[[b;#f778ba;]Projects]');
+            this.echo('=====================================\n');
+            this.echo('[[b;#58a6ff;]Project 1:] Portfolio Website');
+            this.echo('  A lightweight, terminal-based portfolio');
+            this.echo('  Tech: Eleventy, jQuery Terminal\n');
+            this.echo('[[b;#58a6ff;]Project 2:] CTF Writeup Platform');
+            this.echo('  Platform for sharing CTF writeups and solutions');
+            this.echo('  Tech: Static site generation\n');
+            this.echo('[[b;#58a6ff;]Project 3:] Security Tools');
+            this.echo('  Collection of security analysis tools');
+            this.echo('  Tech: Python, Bash\n');
+        },
+        contact: function() {
+            this.echo('[[b;#f778ba;]Contact Information]');
+            this.echo('=====================================\n');
+            this.echo('[[b;#58a6ff;]Email:]    [[!;;]youstube@example.com]');
+            this.echo('[[b;#58a6ff;]GitHub:]   [[!;;]https://github.com/youstube]');
+            this.echo('[[b;#58a6ff;]Twitter:]  [[!;;]https://twitter.com/youstube]\n');
+        },
+        social: function() {
+            this.echo('[[b;#f778ba;]Social Media]');
+            this.echo('=====================================\n');
+            this.echo('[[b;#58a6ff;]GitHub:]   [[!;;]https://github.com/youstube]');
+            this.echo('[[b;#58a6ff;]Twitter:]  [[!;;]https://twitter.com/youstube]');
+            this.echo('[[b;#58a6ff;]Blog:]     [[!;;]https://youstube.xyz/writeups]\n');
+        },
+        writeups: function() {
+            this.echo('[[b;#f778ba;]CTF Writeups & Blog]');
+            this.echo('=====================================\n');
+            this.echo('Visit [[!;;][[bu;#58a6ff;]https://youstube.xyz/writeups]] for:');
+            this.echo('  • CTF Competition Writeups');
+            this.echo('  • Security Research');
+            this.echo('  • Technical Blog Posts\n');
+        },
+        profile: function() {
+            this.echo('Redirecting to full profile page...');
+            setTimeout(() => window.location.href = '/profile/', 1000);
+        },
+        whoami: function() {
+            this.echo('youstube');
+        },
+        date: function() {
+            this.echo(new Date().toString());
+        }
+    };
+
+    $('#terminal').terminal(commands, {
+        greetings: '[[b;#39ff14;]╔══════════════════════════════════════════════════╗]\n' +
+                   '[[b;#39ff14;]║]  [[b;#f778ba;]Welcome to youstube\'s terminal]            [[b;#39ff14;]║]\n' +
+                   '[[b;#39ff14;]║]                                                  [[b;#39ff14;]║]\n' +
+                   '[[b;#39ff14;]║]  [[;#ffffff;]Type \'[[b;#58a6ff;]help]\' to see available commands]  [[b;#39ff14;]║]\n' +
+                   '[[b;#39ff14;]╚══════════════════════════════════════════════════╝]\n',
+        prompt: '[[b;#58a6ff;]youstube@terminal][[b;#ffffff;]:][[b;#a371f7;]~][[b;#ffffff;]$] ',
+        checkArity: false,
+        exit: false,
+        clear: false,
+        height: '100%',
+        scrollOnEcho: true,
+        completion: Object.keys(commands)
+    });
+});
