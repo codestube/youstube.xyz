@@ -85,15 +85,45 @@
 
     <script src="/scripts/script.js"></script>
     <script>
-        // Hide loading screen when page loads
-        window.addEventListener('load', function() {
-            setTimeout(function() {
-                document.getElementById('loading-screen').style.opacity = '0';
+        // Cookie management functions
+        function setCookie(name, value, hours) {
+            const date = new Date();
+            date.setTime(date.getTime() + (hours * 60 * 60 * 1000));
+            const expires = "expires=" + date.toUTCString();
+            document.cookie = name + "=" + value + ";" + expires + ";path=/";
+        }
+        
+        function getCookie(name) {
+            const nameEQ = name + "=";
+            const ca = document.cookie.split(';');
+            for(let i = 0; i < ca.length; i++) {
+                let c = ca[i];
+                while (c.charAt(0) == ' ') c = c.substring(1, c.length);
+                if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
+            }
+            return null;
+        }
+        
+        // Check if this is the first visit
+        const hasVisited = getCookie('hasVisited');
+        const loadingScreen = document.getElementById('loading-screen');
+        
+        if (hasVisited) {
+            // Not first visit - hide loading screen immediately
+            loadingScreen.style.display = 'none';
+        } else {
+            // First visit - show loading animation and set cookie
+            window.addEventListener('load', function() {
                 setTimeout(function() {
-                    document.getElementById('loading-screen').style.display = 'none';
-                }, 500);
-            }, 800);
-        });
+                    loadingScreen.style.opacity = '0';
+                    setTimeout(function() {
+                        loadingScreen.style.display = 'none';
+                    }, 500);
+                    // Set cookie to expire in 1 hour
+                    setCookie('hasVisited', 'true', 1);
+                }, 800);
+            });
+        }
     </script>
 </body>
 </html>
