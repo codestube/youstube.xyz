@@ -1,5 +1,6 @@
 module.exports = function(eleventyConfig) {
   // Copy static assets
+  eleventyConfig.addPassthroughCopy({"assets": "."});
   eleventyConfig.addPassthroughCopy("styles");
   eleventyConfig.addPassthroughCopy("scripts");
   eleventyConfig.addPassthroughCopy({"node_modules/jquery/dist/jquery.min.js": "scripts/jquery.min.js"});

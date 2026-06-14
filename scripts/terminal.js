@@ -6,18 +6,12 @@ $(document).ready(function() {
     
     const commands = {
         help: function() {
-            this.echo('Available commands:\n');
-            this.echo('  [[b;#58a6ff;]help]       - Show this help message');
-            this.echo('  [[b;#58a6ff;]about]      - Display information about me');
-            this.echo('  [[b;#58a6ff;]skills]     - List my technical skills');
-            this.echo('  [[b;#58a6ff;]projects]   - Show my projects');
-            this.echo('  [[b;#58a6ff;]contact]    - Get my contact information');
-            this.echo('  [[b;#58a6ff;]social]     - Show social media links');
-            this.echo('  [[b;#58a6ff;]writeups]   - View CTF writeups and blog posts');
-            this.echo('  [[b;#58a6ff;]profile]    - Visit full profile page');
-            this.echo('  [[b;#58a6ff;]whoami]     - Display current user');
-            this.echo('  [[b;#58a6ff;]date]       - Show current date and time');
-            this.echo('  [[b;#58a6ff;]clear]      - Clear the terminal\n');
+            this.echo('Useful commands:\n');
+            this.echo('  [[b;#58a6ff;]about]     - who I am');
+            this.echo('  [[b;#58a6ff;]work]      - what I build');
+            this.echo('  [[b;#58a6ff;]writeups]  - CTF notes and blog posts');
+            this.echo('  [[b;#58a6ff;]contact]   - links and email');
+            this.echo('  [[b;#58a6ff;]clear]     - reset this screen\n');
         },
         about: function() {
             this.echo('[[b;#f778ba;]youstube]');
@@ -32,73 +26,40 @@ $(document).ready(function() {
             this.echo('  • Open Source Contribution');
             this.echo('  • System Architecture & Design\n');
         },
-        skills: function() {
-            this.echo('[[b;#f778ba;]Technical Skills]');
+        work: function() {
+            this.echo('[[b;#f778ba;]Work]');
             this.echo('=====================================\n');
-            this.echo('[[b;#58a6ff;]Languages:]');
-            this.echo('  JavaScript/TypeScript, Python, Java, Go, C/C++\n');
-            this.echo('[[b;#58a6ff;]Frontend:]');
-            this.echo('  React, Vue.js, HTML5, CSS3, Tailwind CSS\n');
-            this.echo('[[b;#58a6ff;]Backend:]');
-            this.echo('  Node.js, Express, Django, Flask, Spring Boot\n');
-            this.echo('[[b;#58a6ff;]DevOps & Tools:]');
-            this.echo('  Docker, Kubernetes, Git, CI/CD, Linux\n');
-            this.echo('[[b;#58a6ff;]Security:]');
-            this.echo('  Web Security, Cryptography, Penetration Testing\n');
-        },
-        projects: function() {
-            this.echo('[[b;#f778ba;]Projects]');
-            this.echo('=====================================\n');
-            this.echo('[[b;#58a6ff;]Project 1:] Portfolio Website');
+            this.echo('[[b;#58a6ff;]Security:] Web exploitation, CTFs, writeups');
+            this.echo('[[b;#58a6ff;]Development:] JavaScript, Python, Node.js');
+            this.echo('[[b;#58a6ff;]Frontend:] HTML, CSS, React-style interfaces\n');
+            this.echo('[[b;#58a6ff;]Portfolio Website]');
             this.echo('  A lightweight, terminal-based portfolio');
             this.echo('  Tech: Eleventy, jQuery Terminal\n');
-            this.echo('[[b;#58a6ff;]Project 2:] CTF Writeup Platform');
+            this.echo('[[b;#58a6ff;]CTF Writeup Archive]');
             this.echo('  Platform for sharing CTF writeups and solutions');
             this.echo('  Tech: Static site generation\n');
-            this.echo('[[b;#58a6ff;]Project 3:] Security Tools');
-            this.echo('  Collection of security analysis tools');
-            this.echo('  Tech: Python, Bash\n');
         },
         contact: function() {
             this.echo('[[b;#f778ba;]Contact Information]');
             this.echo('=====================================\n');
-            this.echo('[[b;#58a6ff;]Email:]    [[!;;]youstube@example.com]');
-            this.echo('[[b;#58a6ff;]GitHub:]   [[!;;]https://github.com/youstube]');
-            this.echo('[[b;#58a6ff;]Twitter:]  [[!;;]https://twitter.com/youstube]\n');
-        },
-        social: function() {
-            this.echo('[[b;#f778ba;]Social Media]');
-            this.echo('=====================================\n');
-            this.echo('[[b;#58a6ff;]GitHub:]   [[!;;]https://github.com/youstube]');
-            this.echo('[[b;#58a6ff;]Twitter:]  [[!;;]https://twitter.com/youstube]');
-            this.echo('[[b;#58a6ff;]Blog:]     [[!;;]https://youstube.xyz/writeups]\n');
+            this.echo('[[b;#58a6ff;]Email:]     [[!;;]youstube@flagaholic.xyz]');
+            this.echo('[[b;#58a6ff;]GitHub:]    [[!;;]https://github.com/codestube]');
+            this.echo('[[b;#58a6ff;]X:]         [[!;;]https://x.com/codestube]');
+            this.echo('[[b;#58a6ff;]Instagram:] [[!;;]https://instagram.com/youstube__]\n');
         },
         writeups: function() {
             this.echo('[[b;#f778ba;]CTF Writeups & Blog]');
             this.echo('=====================================\n');
-            this.echo('Visit [[!;;][[bu;#58a6ff;]https://youstube.xyz/writeups]] for:');
-            this.echo('  • CTF Competition Writeups');
-            this.echo('  • Security Research');
-            this.echo('  • Technical Blog Posts\n');
+            this.echo('Open [[!;;][[bu;#58a6ff;]/writeups/]] for CTF writeups and longer technical posts.\n');
         },
-        profile: function() {
-            this.echo('Redirecting to full profile page...');
-            setTimeout(() => window.location.href = '/profile/', 1000);
-        },
-        whoami: function() {
-            this.echo('youstube');
-        },
-        date: function() {
-            this.echo(new Date().toString());
+        clear: function() {
+            this.clear();
         }
     };
 
     $('#terminal').terminal(commands, {
-        greetings: '[[b;#39ff14;]╔══════════════════════════════════════════════════╗]\n' +
-                   '[[b;#39ff14;]║]  [[b;#f778ba;]Welcome to youstube\'s terminal]            [[b;#39ff14;]║]\n' +
-                   '[[b;#39ff14;]║]                                                  [[b;#39ff14;]║]\n' +
-                   '[[b;#39ff14;]║]  [[;#ffffff;]Type \'[[b;#58a6ff;]help]\' to see available commands]  [[b;#39ff14;]║]\n' +
-                   '[[b;#39ff14;]╚══════════════════════════════════════════════════╝]\n',
+        greetings: '[[b;#f778ba;]youstube terminal]\n' +
+                   'Type \'[[b;#58a6ff;]help]\' to see available commands.\n',
         prompt: '[[b;#58a6ff;]youstube@terminal][[b;#ffffff;]:][[b;#a371f7;]~][[b;#ffffff;]$] ',
         checkArity: false,
         exit: false,
