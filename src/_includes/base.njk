@@ -9,22 +9,9 @@
     <link rel="stylesheet" href="/styles/jquery.terminal.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&family=Jersey+10&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Loading Animation -->
-    <div id="loading-screen">
-        <div class="loading-content">
-            <div class="loading-text">
-                <span>$</span>
-                <span class="cursor">_</span>
-            </div>
-            <div class="loading-bar">
-                <div class="loading-progress"></div>
-            </div>
-        </div>
-    </div>
-
     <header>
         <nav>
             <a href="/" class="logo">youstube</a>
@@ -43,53 +30,12 @@
     </div>
 
     <footer>
-        <p>&copy; 2026 youstube. All rights reserved.</p>
+        <p>&copy; 2026 youstube. All rights reserved. <span aria-hidden="true">&middot;</span> Created with <a href="https://www.11ty.dev/">11ty</a>.</p>
     </footer>
 
     <script src="/scripts/jquery.min.js"></script>
     <script src="/scripts/jquery.terminal.min.js"></script>
     <script src="/scripts/terminal.js"></script>
     <script src="/scripts/script.js"></script>
-    <script>
-        // Cookie management functions
-        function setCookie(name, value, hours) {
-            const date = new Date();
-            date.setTime(date.getTime() + (hours * 60 * 60 * 1000));
-            const expires = "expires=" + date.toUTCString();
-            document.cookie = name + "=" + value + ";" + expires + ";path=/";
-        }
-        
-        function getCookie(name) {
-            const nameEQ = name + "=";
-            const ca = document.cookie.split(';');
-            for(let i = 0; i < ca.length; i++) {
-                let c = ca[i];
-                while (c.charAt(0) === ' ') c = c.substring(1);
-                if (c.indexOf(nameEQ) === 0) return c.substring(nameEQ.length);
-            }
-            return null;
-        }
-        
-        // Check if this is the first visit
-        const hasVisited = getCookie('hasVisited');
-        const loadingScreen = document.getElementById('loading-screen');
-        
-        if (hasVisited) {
-            // Not first visit - hide loading screen immediately
-            loadingScreen.style.display = 'none';
-        } else {
-            // First visit - show loading animation and set cookie
-            window.addEventListener('load', function() {
-                setTimeout(function() {
-                    loadingScreen.style.opacity = '0';
-                    setTimeout(function() {
-                        loadingScreen.style.display = 'none';
-                    }, 500);
-                    // Set cookie to expire in 1 hour
-                    setCookie('hasVisited', 'true', 1);
-                }, 800);
-            });
-        }
-    </script>
 </body>
 </html>
