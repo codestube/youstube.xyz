@@ -4,6 +4,7 @@
   "description": "Developer portfolio and CTF writeups",
   "scripts": {
     "build": "eleventy",
+    "import:writeups": "node scripts/import-writeups.js",
     "serve": "eleventy --serve",
     "start": "eleventy --serve"
   },

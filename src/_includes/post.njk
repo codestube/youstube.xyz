@@ -1,0 +1,26 @@
+---
+layout: base.njk
+---
+
+<article class="post">
+    <div class="post-header">
+        <div class="archive-kicker post-kicker">
+            <span class="archive-chip">{{ "CTF" if contentType == "ctf" else "Blog" }}</span>
+            <time class="archive-date" datetime="{{ date | htmlDateString }}">{{ date | readableDate }}</time>
+            <span>{{ event or displayDate or year }}</span>
+            {% if category %}<span aria-hidden="true">/</span><span>{{ category }}</span>{% endif %}
+        </div>
+        <h1>{{ title }}</h1>
+        {% if sourceUrl %}
+        <a class="post-source" href="{{ sourceUrl }}">View canonical source on GitHub</a>
+        {% endif %}
+    </div>
+
+    <div class="post-content">
+        {{ content | safe }}
+    </div>
+
+    <div class="post-footer">
+        <a href="/writeups/">Back to all posts</a>
+    </div>
+</article>

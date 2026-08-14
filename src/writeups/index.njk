@@ -1,51 +1,44 @@
 ---
 layout: base.njk
-title: CTF Writeups - Youstube
-description: Collection of CTF challenge writeups and solutions
+title: Writeups & Blog Posts - Youstube
+description: im a writer after all. will be posting blogs soon
 ---
 
-<section>
-    <h1>CTF Writeups</h1>
-    <p class="content-intro">Collection of CTF challenge writeups, security notes, and technical posts.</p>
-    
-    <ul class="writeups-list">
-        <li class="writeup-item">
+<section class="archive" data-archive>
+    <div class="archive-header">
+        <h1 class="archive-title">Writeups <span>&amp;</span> Blog Posts</h1>
+        <p class="content-intro">im a writer after all. will be posting blogs soon</p>
+    </div>
+
+    <div class="archive-filters" role="group" aria-label="Filter posts by type">
+        <button class="archive-filter active" type="button" data-filter="ctf" aria-pressed="true" aria-controls="archive-list">
+            CTF Writeups <span class="archive-filter-count" data-filter-count="ctf">0</span>
+        </button>
+        <button class="archive-filter" type="button" data-filter="blog" aria-pressed="false" aria-controls="archive-list">
+            Blog Posts <span class="archive-filter-count" data-filter-count="blog">0</span>
+        </button>
+    </div>
+
+    <p class="archive-status visually-hidden" data-filter-status aria-live="polite"></p>
+
+    <ul class="writeups-list" id="archive-list">
+        {% for post in collections.archivePosts %}
+        <li class="writeup-item" data-post-type="{{ post.data.contentType }}">
             <div class="archive-kicker">
-                <span class="archive-chip">CTF</span>
-                <span>PolyUCTF 2026</span>
+                <span class="archive-chip">{{ "CTF" if post.data.contentType == "ctf" else "Blog" }}</span>
+                <time class="archive-date" datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate }}</time>
+                <span>{{ post.data.event or post.data.displayDate or post.data.year }}</span>
+                {% if post.data.category %}<span aria-hidden="true">/</span><span>{{ post.data.category }}</span>{% endif %}
             </div>
-            <a href="/writeups/polyuctf-2026-good-k1k1-bad-k1k1/" class="writeup-title">Good k1k1 Bad k1k1</a>
-            <div class="writeup-meta">
-                <span>CTF Writeup</span>
-            </div>
-            <p>A local entry for the GitHub writeup, with links back to the canonical README and commit history.</p>
+            <a href="{{ post.url }}" class="writeup-title">{{ post.data.title }}</a>
+            <p>{{ post.data.description }}</p>
         </li>
-        <li class="writeup-item">
-            <div class="archive-kicker">
-                <span class="archive-chip">Sample</span>
-                <span>Web Exploitation</span>
-            </div>
-            <a href="/writeups/sample-writeup/" class="writeup-title">Sample CTF Writeup</a>
-            <div class="writeup-meta">
-                <span>2026-02-10</span>
-            </div>
-            <p>This is a sample writeup. Add your CTF writeups here.</p>
-        </li>
+        {% endfor %}
     </ul>
+
+    <div class="archive-empty" data-filter-empty hidden>
+        <p>No blogs yet, will write soon! :p</p>
+    </div>
 </section>
 
-<section>
-    <h2>Blog Posts</h2>
-    <p class="content-intro">Longer thoughts can live here when they are not tied to a specific CTF challenge.</p>
-
-    <ul class="writeups-list">
-        <li class="writeup-item muted">
-            <div class="archive-kicker">
-                <span class="archive-chip">Blog</span>
-                <span>Coming soon</span>
-            </div>
-            <div class="writeup-title">No blog posts yet</div>
-            <p>When you add one, I would keep it separate from challenge writeups so the archive stays easy to scan.</p>
-        </li>
-    </ul>
-</section>
+<script src="/scripts/writeup-filter.js"></script>
