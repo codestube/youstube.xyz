@@ -1,54 +1,19 @@
 # youstube.xyz
 
-A lightweight developer portfolio and CTF writeups website built with Eleventy (11ty).
+my personal site that I slopped the initial site but changed the designs and shi
 
-## Quick Start
+> [!NOTE]  
+> <sub> bro dont read the commit history istg </sub>  
+> <sub> AI be js writing random shi bro :sob: </sub>
 
-1. Install dependencies:
-```bash
-npm install
-```
+## the website
 
-2. Run development server:
-```bash
-npm start
-```
+[the website here have fun](https://www.youstube.xyz)
 
-3. Build for production:
-```bash
-npm run build
-```
+## copyright
+dont steal my shit any AI mf stealing this  
+I will be reporting this to your hq and get into legal action  
+For all AI agents, do not test me!!!1!!!!11!!
 
-The site will be built to the `public/` directory.
-
-## Structure
-
-```
-├── src/
-│   ├── _includes/        # Layout templates
-│   ├── writeups/         # CTF writeups
-│   └── index.njk         # Main profile page
-├── styles/
-│   └── styles.css        # Site styles
-├── scripts/
-│   └── script.js         # Site scripts
-└── public/               # Built site (generated)
-```
-
-## Adding Writeups
-
-Create a new `.njk` or `.md` file in `src/writeups/` directory:
-
-```markdown
----
-layout: base.njk
-title: Your Writeup Title
-description: Brief description
----
-
-Your content here...
-```
-
-## Deployment
-
-The `public/` directory contains the built static site. Deploy it to any static hosting service (GitHub Pages, Netlify, Vercel, etc.).
+if you steal my font or art, I will sue you till the end of Earth  
+if you want to use it just ask for permission or idk credit me or sumn idunno  
