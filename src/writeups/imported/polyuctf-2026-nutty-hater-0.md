@@ -10,7 +10,7 @@ date: 2026-03-16
 year: 2026
 sourceUrl: "https://github.com/codestube/CTF-Write-Ups/blob/main/PolyUCTF%202026/nutty_hater_0/README.md"
 sourcePath: "PolyUCTF 2026/nutty_hater_0/README.md"
-permalink: /writeups/polyuctf-2026-nutty-hater-0/index.html
+permalink: /posts/polyuctf-2026-nutty-hater-0/index.html
 templateEngineOverride: md
 ---
 
@@ -86,7 +86,7 @@ I wrote this as detailed as possible in hopes of beginners who stumble upon this
 - Internet (for not dying)  
 
 <h2 align="right">
-  <a href="/writeups/polyuctf-2026-nutty-hater-1/">Next Writeup~</a>
+  <a href="/posts/polyuctf-2026-nutty-hater-1/">Next Writeup~</a>
 </h2>
 <sub>
  Tags: OSINT, PolyUCTF, 2026, Bluesky, repost, NuttyShell, First Blood

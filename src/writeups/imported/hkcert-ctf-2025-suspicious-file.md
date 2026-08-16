@@ -10,7 +10,7 @@ date: 2025-12-23
 year: 2025
 sourceUrl: "https://github.com/codestube/CTF-Write-Ups/blob/main/HKCERT%20CTF%202025/Suspicious%20File/README.md"
 sourcePath: "HKCERT CTF 2025/Suspicious File/README.md"
-permalink: /writeups/hkcert-ctf-2025-suspicious-file/index.html
+permalink: /posts/hkcert-ctf-2025-suspicious-file/index.html
 templateEngineOverride: md
 ---
 

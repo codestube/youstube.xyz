@@ -10,7 +10,7 @@ date: 2026-03-16
 year: 2025
 sourceUrl: "https://github.com/codestube/CTF-Write-Ups/blob/main/PolyUCTF%202025/Business%20Intelligence/README.md"
 sourcePath: "PolyUCTF 2025/Business Intelligence/README.md"
-permalink: /writeups/polyuctf-2025-business-intelligence/index.html
+permalink: /posts/polyuctf-2025-business-intelligence/index.html
 templateEngineOverride: md
 ---
 

@@ -10,7 +10,7 @@ date: 2025-09-15
 year: 0
 sourceUrl: "https://github.com/codestube/CTF-Write-Ups/blob/main/07CTF/Insanity/README.md"
 sourcePath: "07CTF/Insanity/README.md"
-permalink: /writeups/07ctf-insanity/index.html
+permalink: /posts/07ctf-insanity/index.html
 templateEngineOverride: md
 ---
 

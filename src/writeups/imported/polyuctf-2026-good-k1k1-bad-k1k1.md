@@ -10,7 +10,7 @@ date: 2026-03-27
 year: 2026
 sourceUrl: "https://github.com/codestube/CTF-Write-Ups/blob/main/PolyUCTF%202026/Good%20k1k1%20Bad%20k1k1/README.md"
 sourcePath: "PolyUCTF 2026/Good k1k1 Bad k1k1/README.md"
-permalink: /writeups/polyuctf-2026-good-k1k1-bad-k1k1/index.html
+permalink: /posts/polyuctf-2026-good-k1k1-bad-k1k1/index.html
 templateEngineOverride: md
 ---
 

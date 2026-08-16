@@ -10,7 +10,7 @@ date: 2026-03-20
 year: 2026
 sourceUrl: "https://github.com/codestube/CTF-Write-Ups/blob/main/PolyUCTF%202026/nutty_hater_1/README.md"
 sourcePath: "PolyUCTF 2026/nutty_hater_1/README.md"
-permalink: /writeups/polyuctf-2026-nutty-hater-1/index.html
+permalink: /posts/polyuctf-2026-nutty-hater-1/index.html
 templateEngineOverride: md
 ---
 

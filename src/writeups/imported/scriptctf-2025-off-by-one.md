@@ -10,7 +10,7 @@ date: 2025-08-29
 year: 2025
 sourceUrl: "https://github.com/codestube/CTF-Write-Ups/blob/main/scriptCTF%202025/Off%20by%20One/README.md"
 sourcePath: "scriptCTF 2025/Off by One/README.md"
-permalink: /writeups/scriptctf-2025-off-by-one/index.html
+permalink: /posts/scriptctf-2025-off-by-one/index.html
 templateEngineOverride: md
 ---
 

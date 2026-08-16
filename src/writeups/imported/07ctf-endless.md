@@ -10,7 +10,7 @@ date: 2025-09-15
 year: 0
 sourceUrl: "https://github.com/codestube/CTF-Write-Ups/blob/main/07CTF/Endless/README.md"
 sourcePath: "07CTF/Endless/README.md"
-permalink: /writeups/07ctf-endless/index.html
+permalink: /posts/07ctf-endless/index.html
 templateEngineOverride: md
 ---
 

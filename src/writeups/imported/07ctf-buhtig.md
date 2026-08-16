@@ -10,7 +10,7 @@ date: 2025-09-16
 year: 0
 sourceUrl: "https://github.com/codestube/CTF-Write-Ups/blob/main/07CTF/buhtig/README.md"
 sourcePath: "07CTF/buhtig/README.md"
-permalink: /writeups/07ctf-buhtig/index.html
+permalink: /posts/07ctf-buhtig/index.html
 templateEngineOverride: md
 ---
 

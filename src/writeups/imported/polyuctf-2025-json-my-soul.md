@@ -10,7 +10,7 @@ date: 2026-03-16
 year: 2025
 sourceUrl: "https://github.com/codestube/CTF-Write-Ups/blob/main/PolyUCTF%202025/JSON%20My%20Soul/README.md"
 sourcePath: "PolyUCTF 2025/JSON My Soul/README.md"
-permalink: /writeups/polyuctf-2025-json-my-soul/index.html
+permalink: /posts/polyuctf-2025-json-my-soul/index.html
 templateEngineOverride: md
 ---
 

@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const href = link.getAttribute('href');
         if (href === currentPath || 
             (currentPath === '/' && href === '/') ||
-            (currentPath.includes('/writeups') && href.includes('/writeups')) ||
+            (currentPath.includes('/posts') && href.includes('/posts')) ||
             (currentPath.includes('/terminal') && href.includes('/terminal'))) {
             link.classList.add('active');
         }

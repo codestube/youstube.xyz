@@ -10,7 +10,7 @@ date: 2026-02-08
 year: 2026
 sourceUrl: "https://github.com/codestube/CTF-Write-Ups/blob/main/Firebird%20CTF%202026/WaterBird/README.md"
 sourcePath: "Firebird CTF 2026/WaterBird/README.md"
-permalink: /writeups/firebird-ctf-2026-waterbird/index.html
+permalink: /posts/firebird-ctf-2026-waterbird/index.html
 templateEngineOverride: md
 ---
 

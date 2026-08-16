@@ -142,7 +142,7 @@ function repositoryTarget(relativeTarget, relativeReadme, slugByReadme) {
     const readmeDirectory = path.posix.dirname(relativeReadme);
     const resolved = path.posix.normalize(path.posix.join(readmeDirectory, targetPath));
     if (slugByReadme.has(resolved)) {
-        return `/writeups/${slugByReadme.get(resolved)}/${hash}`;
+        return `/posts/${slugByReadme.get(resolved)}/${hash}`;
     }
 
     const localTarget = path.join(sourceRoot, ...resolved.split("/"));
@@ -237,7 +237,7 @@ posts.forEach((post) => {
         `year: ${post.year}`,
         `sourceUrl: ${yamlString(sourceUrl(post.relative))}`,
         `sourcePath: ${yamlString(post.relative)}`,
-        `permalink: /writeups/${post.slug}/index.html`,
+        `permalink: /posts/${post.slug}/index.html`,
         "templateEngineOverride: md",
         "---"
     ].join("\n");
