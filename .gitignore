@@ -4,3 +4,4 @@ public/
 *.log
 .env
 ForMe.md
+src/blogs/templates

@@ -5,8 +5,9 @@
 }
 
 @font-face {
-    font-family: 'YoustubeUI';
-    src: url('/final_font.ttf') format('truetype');
+    font-family: 'codestubeUI';
+    /* src: url('/final_font.ttf') format('truetype'); */
+    src: url('/font-cursiveless.ttf') format('truetype');
     font-style: normal;
     font-weight: 400;
     font-display: block;
@@ -41,7 +42,7 @@
     --terminal-bg: #000000;
     --terminal-text: #39ff14;
     --body-font: 'Jersey 10', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-    --display-font: 'YoustubeUI', 'Fira Code', 'Consolas', 'Monaco', 'Courier New', monospace;
+    --display-font: 'codestubeUI', 'Fira Code', 'Consolas', 'Monaco', 'Courier New', monospace;
     --terminal-font: 'Fira Code', 'Consolas', 'Monaco', 'Courier New', monospace;
     --header-height: 64px;
     --content-width: 1100px;
