@@ -1,6 +1,6 @@
 ---
 layout: post.njk
-title: "After thoughts of org-ing my first (internal) CTF"
+title: "The ins, outs and the drama in holicCTF v1"
 description: "holicCTF v1 post-mortem"
 tags: archivePost
 contentType: blog
