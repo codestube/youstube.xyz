@@ -12,7 +12,7 @@ templateEngineOverride: md
 # My first CTF org'ed!! (Internally)
 
 Hai!! If you don't know who I am, I'm youstube, the leader of [flagaholic](https://flagaholic.xyz) :agahi:. Recently (like a month ago), I have planned, designed, hosted, organized my first ever Capture The Flag event, unofficially named holicCTF v1 (internal), and there's a lot of things I want to uncover / write down to share my two-cent on CTF as of recently and **how I plan to change the scene**, as well as some things that have happened during the event.  
-<small>[if you are here for the drama on us banning pavel (pavel_edits), click here to read](#the-drama)</small>
+[if you are here for the drama on us banning pavel (pavel_edits), click here to readdddddddd](#the-drama)
 
 ![holicCTF-scoreboard](/posts/holicctf-v1/scoreboard.png)
 <small>the only reason the graph looks like that is because I forgot to add points for a special reason :skulk:</small>
@@ -126,9 +126,11 @@ To make things clear once again, this CTF does not have **ANY PRIZES AT ALL**, m
 
 We have explicitly made a rule telling people not to slop any challenges.  
 ![rule-5](/posts/holicctf-v1/rule-5.png)  
+![discord-rule](/posts/holicctf-v1/rules-quiz.png)
+<small>there was this rule quiz that you had to do first to get access to all other challs</small>  
 Now for the 4th sub-point, I'd step forward and say I've asked a player or two on how they solved a challenge to prove their legitimacy on not slopping due to suspicion, but lwk I just forgot this sub-rule :skull: Anyhow this isn't that important  
 
-The funny thing was, someone actually telling me that they like the format, which I appreciated. However out of nowhere when asked about the unique NSFW challs, he explicitly said he slopped the challenges... in which I did not even force that information out of him. He just said it. and that someone is none other than pavel himself.  
+The funny thing was, someone actually told me that they like the format, which I appreciated. However out of nowhere when asked about the unique NSFW challs, he explicitly said he slopped the challenges... in which I did not even force that information out of him. He just said it. and that someone is none other than pavel himself.  
 
 ![chatlog-1](/posts/holicctf-v1/chatlog-1.png)  
 ![chatlog-2](/posts/holicctf-v1/chatlog-2.png)  
@@ -159,7 +161,7 @@ insert vine boom sound
 kudos to L3akCTF's team (and [Andyrew](https://ctf.snowbird91.xyz/) for org'ing L3akCTF and allowing me to cover this in the blog) with these more meticulous ways to catch sloppers like him. To not only slop at a unknown, fameless CTF like holicCTF v1, but to disrespect the rules of no-AI implemented by L3ak, arguably one of the top team in US (w glaze?) is genuine brainrot activity.
 
 ### my feelings
-After all of these clown fiesta, I genuinely decided to just ignore him. I've given him chances to stop doing so, like telling him that slopping challs was not okay with the NSFW ones, but he continued his lies and ignored the rules that I've explicitly set (there was a rule quiz that you had to do to get access to the challenges btw to make sure you understood the rules), disregarded this **internal, prizeless, fameless, pure fun, only for feedbacks** CTF made by me and our team. Doing the same thing in a more prestigious CTF called L3akCTF is crazy as well. This was extremely disrespectful to me as the organizer, author, and his online friend as both leader of a CTF team.  
+After all of these clown fiesta, I genuinely decided to just ignore him. I've given him chances to stop doing so, like telling him that slopping challs was not okay with the NSFW ones, but he continued his lies and ignored the rules that I've explicitly set, disregarded this **internal, prizeless, fameless, pure fun, only for feedbacks** CTF made by me and our team. Doing the same thing in a more prestigious CTF called L3akCTF is crazy as well. This was extremely disrespectful to me as the organizer, author, and his online friend as both leader of a CTF team.  
 
 I initially respected him because on the surface he looked as if he was able to gather a bunch of players, and be able to maintain a HUGE community server, while having good placements in CTFs (and also pep talking to his teammates). I won't say I looked up to him, but he was someone I turned to when I was anxious about my team inactivity problem. To be able to uphold such an active community like THEM?! is no easy feat to be completely frank. Those are some of the reason I invited him (and maybe have him author some cryptos if he understands the authoring system), but now I really don't want to have any connection with him.  
 
