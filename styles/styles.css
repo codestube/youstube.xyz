@@ -13,22 +13,6 @@
     font-display: block;
 }
 
-@font-face {
-    font-family: 'Jersey 10';
-    src: url('/fonts/jersey-10-latin.woff2') format('woff2');
-    font-style: normal;
-    font-weight: 400;
-    font-display: block;
-}
-
-@font-face {
-    font-family: 'Fira Code';
-    src: url('/fonts/fira-code-latin.woff2') format('woff2');
-    font-style: normal;
-    font-weight: 300 700;
-    font-display: block;
-}
-
 :root {
     --bg-primary: #0d1117;
     --bg-secondary: #161b22;
@@ -41,9 +25,9 @@
     --border-color: #30363d;
     --terminal-bg: #000000;
     --terminal-text: #39ff14;
-    --body-font: 'Jersey 10', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-    --display-font: 'codestubeUI', 'Fira Code', 'Consolas', 'Monaco', 'Courier New', monospace;
-    --terminal-font: 'Fira Code', 'Consolas', 'Monaco', 'Courier New', monospace;
+    --body-font: 'codestubeUI', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    --display-font: 'codestubeUI', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    --terminal-font: 'codestubeUI', ui-monospace, 'SFMono-Regular', Menlo, Consolas, monospace;
     --header-height: 64px;
     --content-width: 1100px;
 }
@@ -55,7 +39,7 @@ html {
 
 body {
     font-family: var(--body-font);
-    font-size: 20px;
+    font-size: 24px;
     background: var(--bg-primary);
     color: var(--text-primary);
     line-height: 1.7;
@@ -582,6 +566,231 @@ section h2 {
     height: auto;
     margin: 1.2rem auto;
     border: 1px solid var(--border-color);
+}
+
+.media-gallery {
+    --media-row-height: clamp(10.5rem, 22vw, 13.75rem);
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-auto-rows: var(--media-row-height);
+    gap: 0.7rem;
+    margin: 1.5rem 0;
+}
+
+.media-gallery--1 {
+    grid-template-columns: minmax(0, 1fr);
+    --media-row-height: clamp(15rem, 38vw, 21rem);
+}
+
+.media-gallery--3 .media-gallery-item:first-child {
+    grid-row: span 2;
+}
+
+.media-gallery-item {
+    position: relative;
+    min-width: 0;
+    margin: 0;
+    overflow: hidden;
+    background: #07090d;
+    border: 1px solid var(--border-color);
+}
+
+.media-gallery--4 .media-gallery-item:nth-child(n + 5) {
+    display: none;
+}
+
+.media-gallery-open {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    overflow: hidden;
+    cursor: zoom-in;
+    background: transparent;
+    border: 0;
+}
+
+.media-gallery-open img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    border: 0;
+    object-fit: cover;
+    object-position: center top;
+}
+
+.media-gallery-caption {
+    position: absolute;
+    right: 0;
+    left: 0;
+    z-index: 1;
+    margin: 0;
+    padding: 0.35rem 0.5rem;
+    color: var(--text-primary);
+    font-size: 1rem;
+    line-height: 1.25;
+    background: rgba(7, 9, 13, 0.9);
+}
+
+.media-gallery-caption {
+    bottom: 0;
+    color: var(--text-secondary);
+}
+
+.media-gallery-caption:empty {
+    display: none;
+}
+
+.post-content img.inline-emoji {
+    display: inline-block;
+    width: auto;
+    max-width: none;
+    height: 0.95em;
+    margin: 0 0.06em;
+    vertical-align: -0.12em;
+    object-fit: contain;
+    border: 0;
+}
+
+.media-gallery-more {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    display: grid;
+    width: 100%;
+    height: 100%;
+    place-items: center;
+    color: #fff;
+    font-family: var(--display-font);
+    font-size: 2rem;
+    background: rgba(7, 9, 13, 0.65);
+}
+
+.media-viewer {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: fit-content;
+    max-width: 96vw;
+    height: fit-content;
+    max-height: 92dvh;
+    margin: 0;
+    padding: 0;
+    overflow: visible;
+    color: var(--text-primary);
+    background: #07090d;
+    border: 1px solid var(--border-color);
+    transform: translate(-50%, -50%);
+}
+
+.media-viewer::backdrop {
+    background: rgba(0, 0, 0, 0.7);
+}
+
+.media-viewer-figure {
+    display: grid;
+    grid-template-rows: auto auto;
+    width: fit-content;
+    max-width: 96vw;
+    height: auto;
+    max-height: 92dvh;
+    margin: 0;
+    align-self: center;
+    justify-self: center;
+}
+
+.media-viewer img {
+    display: block;
+    width: auto;
+    height: auto;
+    max-width: none;
+    max-height: calc(92dvh - 1.65rem);
+    align-self: center;
+    justify-self: center;
+    object-fit: contain;
+}
+
+.media-viewer figcaption {
+    max-width: 100%;
+    color: var(--text-secondary);
+    padding: 0.25rem 0.5rem 0.5rem;
+    font-size: 1rem;
+    line-height: 1.35;
+    text-align: center;
+}
+
+.media-viewer-close,
+.media-viewer-previous,
+.media-viewer-next {
+    position: absolute;
+    z-index: 1;
+    display: grid;
+    width: 2.25rem;
+    height: 2.25rem;
+    padding: 0;
+    cursor: pointer;
+    color: var(--text-primary);
+    font-size: 1.8rem;
+    line-height: 1;
+    background: #0d1117;
+    border: 1px solid var(--border-color);
+    place-items: center;
+}
+
+.media-viewer-close {
+    top: 0.65rem;
+    right: 0.65rem;
+}
+
+.media-viewer-previous,
+.media-viewer-next {
+    top: calc(50% - 1.125rem);
+}
+
+.media-viewer-previous { left: 0.65rem; }
+.media-viewer-next { right: 0.65rem; }
+
+.media-viewer-previous[hidden],
+.media-viewer-next[hidden] {
+    display: none;
+}
+
+@media (max-width: 560px) {
+    .media-gallery {
+        --media-row-height: 9rem;
+        gap: 0.5rem;
+    }
+
+    .media-gallery--1 {
+        --media-row-height: min(58vw, 16rem);
+    }
+
+    .media-gallery-caption {
+        font-size: 1rem;
+    }
+
+    .media-viewer {
+        width: fit-content;
+        max-width: 100vw;
+        height: fit-content;
+        max-height: 100dvh;
+        padding: 0;
+        border: 0;
+    }
+
+    .media-viewer-figure {
+        max-width: 100vw;
+        max-height: 100dvh;
+    }
+
+    .media-viewer img {
+        max-height: calc(100dvh - 1.65rem);
+    }
+
+    .media-viewer-previous { left: 0.25rem; }
+    .media-viewer-next { right: 0.25rem; }
 }
 
 .post-content pre {

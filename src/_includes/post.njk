@@ -24,3 +24,6 @@ layout: base.njk
         <a href="/posts/">Back to all posts</a>
     </div>
 </article>
+{% if contentType == "blog" %}
+<script src="/scripts/media-gallery.js?v={{ assetVersion }}" defer></script>
+{% endif %}

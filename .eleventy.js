@@ -1,4 +1,15 @@
+let assetVersion = Date.now();
+
 module.exports = function(eleventyConfig) {
+  eleventyConfig.setServerOptions({
+    headers: {
+      "Cache-Control": "no-store"
+    }
+  });
+  eleventyConfig.addGlobalData("assetVersion", function() {
+    return assetVersion;
+  });
+
   // Copy static assets
   eleventyConfig.addPassthroughCopy({"assets": "."});
   eleventyConfig.addPassthroughCopy("styles");
@@ -35,7 +46,7 @@ module.exports = function(eleventyConfig) {
       return String(left.data.title || "").localeCompare(String(right.data.title || ""));
     });
   });
-  
+
   return {
     dir: {
       input: "src",

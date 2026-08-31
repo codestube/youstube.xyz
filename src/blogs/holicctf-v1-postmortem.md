@@ -14,7 +14,7 @@ templateEngineOverride: md
 Hai!! If you don't know who I am, I'm youstube, the leader of [flagaholic](https://flagaholic.xyz) :agahi:. Recently (like a month ago), I have planned, designed, hosted, organized my first ever Capture The Flag event, unofficially named holicCTF v1 (internal), and there's a lot of things I want to uncover / write down to share my two-cent on CTF as of recently and **how I plan to change the scene**, as well as some things that have happened during the event.  
 <small>[if you are here for the drama on us banning pavel (pavel_edits), click here to read](#the-drama)</small>
 
-![holicCTF-scoreboard](/posts/holicctf-v1/scoreboard.png)  
+![holicCTF-scoreboard](/posts/holicctf-v1/scoreboard.png)
 <small>the only reason the graph looks like that is because I forgot to add points for a special reason :skulk:</small>
 
 ## Disclaimer on my standpoint for CTF
