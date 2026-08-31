@@ -17,11 +17,11 @@ Hai!! If you don't know who I am, I'm youstube, the leader of [flagaholic](https
 ![holicCTF-scoreboard](/posts/holicctf-v1/scoreboard.png)
 <small>the only reason the graph looks like that is because I forgot to add points for a special reason :skulk:</small>
 
-## Disclaimer on my standpoint for CTF
+## <span id="disclaimer">Disclaimer on my standpoint for CTF
 
 First off to make things clear, I am in no position to say that CTF is dead. I am purely a newbie in the scene of CTF (1.5y as of right now) and I don't have as much experience as those OGs talking about the downfall of CTF or how agentic LLMs ruined CTF blahblahblah. My opinions are purely based on what I have gathered from my own experience and some of my peers. ***In my honest opinion, CTF is purely dead for people that plays it for prize and top position.*** I am part of the aforementioned problem <small>(slopped a lot in past CTF, will write a blog on how I won one of them in the future)</small>, but I still enjoy the general aspect of solving puzzle and be rewarded for it in CTFs, and have since taken a different idealism on playing CTF. With that out of the way, let's talk about holicCTF v1 :D
 
-## The born of (internal) holicCTF v1
+## <span id="born-of-holicctf">The born of (internal) holicCTF v1
 
 After playing CTF for a year, and watching all the terrible CTFs our team has endured, I had the idea of hosting our own for funzies. However at the time, CTF has heated debates on whether it is dying or not. Personally I viewed this as an opportuinty to revamp CTF as a whole, where the core idea of jeopardy stays, but part of its mechanics are changed. The idea came to me while I was on the way to a CTF prizing ceremony actually (PolyU Nuttyshell CTF 2026), and I roughly mentioned it to some of my teammates. Most of them laughed it off, saying it's definitely an unorthodox idea, but I was serious to make this happen since it'll be the **WORLD'S FIRST EVER** CTF that had these ideas, and I was the one orchestrating it.
 
@@ -37,7 +37,7 @@ I had another idea that is also unique and never been done before: **Everyone is
 
 This two ideas / changes are what made holicCTF v1 (internal) the **WORLD'S FIRST EVER** unique CTF to ever be hosted, even though it was internal. Although there were some hiccups during the design part that ultimately led to a week of delay for the CTF (i hate you SISUBENY), we did end up ~~vibe~~coding of the implementations and organizing this CTF.
 
-## Some prologue on the CTF
+## <span id="prologue">Some prologue on the CTF
 
 holicCTF v1 was a 1-week long CTF, held internally within our team members and some players that I personally invited (including pavel?!, AgentPerry, tienxion. (didn't join), wylited (didn't join) & Multiflora_Rose). This was not held publicly due to 3 reasons:
 
@@ -47,7 +47,7 @@ holicCTF v1 was a 1-week long CTF, held internally within our team members and s
 
 By those reasons, I've decided to just make this an internal one. I also invited these players because I know that they have integrity when it comes to CTFs (<small>subtle foreshadowing</small>), and they more or less have played CTF for ~1y.
 
-## Details on the CTF
+## <span id="details">Details on the CTF
 
 This CTF has 3 features that were never done before:
 
@@ -168,7 +168,7 @@ I initially respected him because on the surface he looked as if he was able to 
 Pavel if you're reading this, I know you have DM'd me a few times, but from the context of your words, you're still trying to make this about you. It was never about you, you disrespect **my challenges, my rules, my CTF, my creations** (so corny bro). I genuinely don't want to associate with someone that lies, manipulates, and as self-centered as you are. Please stop trying to make amends.  
 ![pavels-dm](/posts/holicctf-v1/pavels-dm.png)
 
-## Closing words
+## <span id="closing-words">Closing words
 This blog took me around 2 weeks to compose, I know wayyyyyyy too long, but I wanted to really demonstrate what I see in future CTFs. To make it a fun, exciting environment of not just playing jeopardy, but a fun puzzle game with various quirks and mechs for everyone to enjoy in this AI-heavily-bombarded era. My goal is to achieve [this blog's idealism written by Michael Debono (or mixy1) from OtterSec](https://osec.io/blog/save-ctfs-fund/#whats-the-solution), and make a certain impact on shifting CTF to something more fun then just solving challenges.  
 
 I know I'm still a no-namer to many, a beginner or just a small fry in the CTF scene. However, I hope to be one of the figures to at least tried to change the CTF scene, and instead of having this constant heated debate of AI vs CTF, it's more debates of who made a game that's more fun.  
