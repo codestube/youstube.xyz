@@ -11,7 +11,7 @@ templateEngineOverride: md
 
 # My first CTF org'ed!! (Internally)
 
-Hai!! If you don't know who I am, I'm youstube, the leader of [flagaholic](https://flagaholic.xyz) :agahi:. Recently (like a month ago), I have planned, designed, hosted, organized my first ever Capture The Flag event, unofficially named holicCTF v1 (internal), and there's a lot of things I want to uncover / write down to share my two-cent on CTF as of recently and **how I plan to change the scene**, as well as some things that have happened during the event.  
+Hai!! If you don't know who I am, I'm youstube, the leader of [flagaholic](https://flagaholic.hk) :agahi:. Recently (like a month ago), I have planned, designed, hosted, organized my first ever Capture The Flag event, unofficially named holicCTF v1 (internal), and there's a lot of things I want to uncover / write down to share my two-cent on CTF as of recently and **how I plan to change the scene**, as well as some things that have happened during the event.  
 [if you are here for the drama on us banning pavel (pavel_edits), click here to readdddddddd](#the-drama)
 
 ![holicCTF-scoreboard](/posts/holicctf-v1/scoreboard.png)

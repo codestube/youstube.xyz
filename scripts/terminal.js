@@ -47,11 +47,11 @@ $(document).ready(function() {
             "contact.md": file([
                 // gng codex did NOT cook on formats wtf
                 // "discord.txt": file("DM me @youtubeshort"),
-                // "email.txt": file("[[!;;]youstube@flagaholic.xyz]"),
+                // "email.txt": file("[[!;;]youstube@flagaholic.hk]"),
                 // "github.txt": file("[[!;;]https://github.com/codestube]"),
                 // "x.txt": file("[[!;;]https://x.com/codestube]")
                 "# Find me onnnnnn",
-                "[Email]     [[!;;]youstube@flagaholic.xyz]",
+                "[Email]     [[!;;]youstube@flagaholic.hk]",
                 "[Discord]   DM me @youtubeshort",
                 "[X]         [[!;;]https://x.com/codestube]",
                 "[GitHub]    [[!;;]https://github.com/codestube]",
@@ -72,13 +72,13 @@ $(document).ready(function() {
                     "",
                 ]),
                 "websites.md": file([
-                    "# youstube.xyz and flagaholic.xyz",
+                    "# youstube.xyz and flagaholic.hk",
                     "I [[s;;]vibe]built these websites, but meticulously added/fixed various UI/UX manually! (I read the code)",
                     "",
                     "This website was built w/ 11ty, and the other one w/ Astro.",
                     "(i know this isn't really an achievement in SWE-sense (vibe-building projects), but I'm learning from the code and actively reading it)",
                     "",
-                    "Anyways! [[!;;]https://youstube.xyz] && [[!;;]https://flagaholic.xyz] << check them out!",
+                    "Anyways! [[!;;]https://youstube.xyz] && [[!;;]https://flagaholic.hk] << check them out!",
                     "",
                 ])
             }),
