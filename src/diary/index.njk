@@ -45,10 +45,13 @@ permalink: /diary/index.html
                                     {% if message.images.length or message.videos.length %}
                                     <div class="media-gallery diary-gallery" aria-label="Attached diary media">
                                         {% for video in message.videos %}
-                                        <figure class="media-gallery-item media-gallery-item--video" data-alt="{{ video.alt }}">
-                                            <video class="media-gallery-video" controls playsinline preload="metadata" aria-label="{{ video.alt }}">
-                                                <source src="{{ video.src }}" type="{{ video.type }}">
-                                            </video>
+                                        <figure class="media-gallery-item media-gallery-item--video" data-original-src="{{ video.src }}" data-alt="{{ video.alt }}" data-media-type="video" data-media-mime="{{ video.type }}">
+                                            <button class="media-gallery-open" type="button" aria-label="Open video {{ video.alt }}">
+                                                <video class="media-gallery-video media-gallery-thumbnail" muted playsinline preload="metadata" aria-hidden="true" tabindex="-1">
+                                                    <source src="{{ video.src }}" type="{{ video.type }}">
+                                                </video>
+                                                <span class="media-gallery-video-badge" aria-hidden="true">▶</span>
+                                            </button>
                                         </figure>
                                         {% endfor %}
 
@@ -95,10 +98,13 @@ permalink: /diary/index.html
                                                         {% if comment.images.length or comment.videos.length %}
                                                         <div class="media-gallery diary-gallery diary-comment-gallery" aria-label="Media attached to {{ comment.author.name }}'s reply">
                                                             {% for video in comment.videos %}
-                                                            <figure class="media-gallery-item media-gallery-item--video" data-alt="{{ video.alt }}">
-                                                                <video class="media-gallery-video" controls playsinline preload="metadata" aria-label="{{ video.alt }}">
-                                                                    <source src="{{ video.src }}" type="{{ video.type }}">
-                                                                </video>
+                                                            <figure class="media-gallery-item media-gallery-item--video" data-original-src="{{ video.src }}" data-alt="{{ video.alt }}" data-media-type="video" data-media-mime="{{ video.type }}">
+                                                                <button class="media-gallery-open" type="button" aria-label="Open video {{ video.alt }}">
+                                                                    <video class="media-gallery-video media-gallery-thumbnail" muted playsinline preload="metadata" aria-hidden="true" tabindex="-1">
+                                                                        <source src="{{ video.src }}" type="{{ video.type }}">
+                                                                    </video>
+                                                                    <span class="media-gallery-video-badge" aria-hidden="true">▶</span>
+                                                                </button>
                                                             </figure>
                                                             {% endfor %}
 

@@ -254,12 +254,6 @@
         });
     }
 
-    function setupInlineVideos() {
-        document.querySelectorAll(".media-gallery-video, .diary-video").forEach((video) => {
-            video.volume = 0.5;
-        });
-    }
-
     function applyLayout(gallery) {
         const items = [...gallery.querySelectorAll(":scope > .media-gallery-item")];
         const visibleCount = Math.min(items.length, 4);
@@ -273,8 +267,8 @@
         }
         items.forEach((item, index) => {
             const button = item.querySelector("button");
-            const image = button?.querySelector("img");
-            if (!button || !image) return;
+            const preview = button?.querySelector("img, video");
+            if (!button || !preview) return;
             const markUnavailable = () => {
                 if (button.classList.contains("media-gallery-open--unavailable")) return;
                 button.disabled = true;
@@ -282,8 +276,8 @@
                 button.textContent = "media unavailable from Discord";
             };
 
-            image.addEventListener("error", markUnavailable, { once: true });
-            if (image.complete && !image.naturalWidth) markUnavailable();
+            preview.addEventListener("error", markUnavailable, { once: true });
+            if (preview instanceof HTMLImageElement && preview.complete && !preview.naturalWidth) markUnavailable();
             button.addEventListener("click", () => {
                 if (!button.disabled) openViewer(items, index);
             });
@@ -295,7 +289,7 @@
     viewer.innerHTML = `
         <button class="media-viewer-close" type="button" aria-label="Close image viewer">×</button>
         <button class="media-viewer-previous" type="button" aria-label="Previous image">‹</button>
-        <figure class="media-viewer-figure"><img alt=""><figcaption></figcaption></figure>
+        <figure class="media-viewer-figure"><img alt=""><video class="media-viewer-video" controls playsinline preload="metadata" hidden></video><figcaption></figcaption></figure>
         <button class="media-viewer-next" type="button" aria-label="Next image">›</button>
     `;
     document.body.append(viewer);
@@ -303,6 +297,7 @@
     let viewerItems = [];
     let viewerIndex = 0;
     const viewerImage = viewer.querySelector("img");
+    const viewerVideo = viewer.querySelector(".media-viewer-video");
     const viewerCaption = viewer.querySelector("figcaption");
     const viewerFigure = viewer.querySelector(".media-viewer-figure");
     const previous = viewer.querySelector(".media-viewer-previous");
@@ -326,22 +321,37 @@
     function renderViewer() {
         const item = viewerItems[viewerIndex];
         const original = item.dataset.originalSrc;
+        const isVideo = item.dataset.mediaType === "video";
         viewerFigure.style.removeProperty("width");
         viewerImage.style.removeProperty("width");
-        viewerImage.src = original;
-        viewerImage.alt = item.dataset.alt;
+        viewerVideo.pause();
+        viewerVideo.removeAttribute("src");
+        viewerImage.hidden = isVideo;
+        viewerVideo.hidden = !isVideo;
+        if (isVideo) {
+            viewerVideo.src = original;
+            viewerVideo.volume = 0.5;
+            viewerVideo.load();
+        } else {
+            viewerImage.src = original;
+            viewerImage.alt = item.dataset.alt;
+        }
         const caption = item.querySelector(".media-gallery-caption")?.textContent?.trim();
         const label = item.dataset.alt;
         viewerCaption.textContent = caption ? caption : label;
         previous.hidden = viewerItems.length < 2;
         next.hidden = viewerItems.length < 2;
-        if (viewerImage.complete) fitViewerImage();
+        if (!isVideo && viewerImage.complete) fitViewerImage();
     }
 
     async function openViewer(items, index) {
         viewerItems = items;
         viewerIndex = index;
         renderViewer();
+        if (viewerVideo.hidden === false) {
+            viewer.showModal();
+            return;
+        }
         try {
             await viewerImage.decode();
         } catch {
@@ -372,7 +382,12 @@
         if (event.key === "ArrowLeft") moveViewer(-1);
         if (event.key === "ArrowRight") moveViewer(1);
     });
-    viewer.addEventListener("close", () => { viewerImage.removeAttribute("src"); });
+    viewer.addEventListener("close", () => {
+        viewerImage.removeAttribute("src");
+        viewerVideo.pause();
+        viewerVideo.removeAttribute("src");
+        viewerVideo.load();
+    });
 
     if (content) {
         [...content.querySelectorAll("p")].forEach(transformParagraph);
@@ -381,7 +396,6 @@
     }
     replaceDiscordEmojiShortcodes();
     replaceStrikethroughMarkup();
-    setupInlineVideos();
     const galleries = content
         ? [...content.querySelectorAll(".media-gallery"), ...diaryGalleries]
         : [...diaryGalleries];
