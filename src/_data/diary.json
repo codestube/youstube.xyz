@@ -3,6 +3,179 @@
   "summary": "My daily-ish diary studying abroad :D",
   "days": [
     {
+      "isoDate": "2026-10-15",
+      "date": "Oct 15 (Thu)",
+      "clusters": [
+        {
+          "messages": [
+            {
+              "id": "1560375791806718135",
+              "isoTime": "2026-10-15T19:36:19.147000+00:00",
+              "bst": "20:36 BST",
+              "hkt": "03:36 HKT",
+              "body": "i missed day 17 nice",
+              "images": [],
+              "videos": [],
+              "reactions": [
+                {
+                  "label": ":💀:",
+                  "emoji": "💀",
+                  "image": null,
+                  "count": 2
+                }
+              ],
+              "comments": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "isoDate": "2026-10-14",
+      "date": "Oct 14 (Wed)",
+      "clusters": [
+        {
+          "messages": [
+            {
+              "id": "1559974054398660781",
+              "isoTime": "2026-10-14T16:59:57.485000+00:00",
+              "bst": "17:59 BST",
+              "hkt": "00:59 HKT",
+              "body": "i know i missed day 15 and 16 ill do it later",
+              "images": [],
+              "videos": [],
+              "reactions": [
+                {
+                  "label": ":💀:",
+                  "emoji": "💀",
+                  "image": null,
+                  "count": 2
+                }
+              ],
+              "comments": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "isoDate": "2026-10-12",
+      "date": "Oct 12 (Mon)",
+      "clusters": [
+        {
+          "messages": [
+            {
+              "id": "1559109875114713088",
+              "isoTime": "2026-10-12T07:46:01.088000+00:00",
+              "bst": "08:46 BST",
+              "hkt": "15:46 HKT",
+              "body": "day 14\nits been 2 weeks so quick\nidk seems fun to say the least\nI have a monthly allowance of 300quids (~3k hkd)\nhopefully i can survive longer than anticipated\ni ate takeaway ordered w/ uber eats for the first time, it was daves hot chicken\nand i js gotta say its so good 😋 i would order more often tbh <:kekw:778988866228453437>\nand it was fairly reasonably priced for the order, so its fine\ni really need to pick cooking back up again, i'm too lazy and need to lwk lock in\ni need to buy grocery and stuff, but wtv i'll do it tmr or ttmr",
+              "images": [
+                {
+                  "src": "https://cdn.discordapp.com/attachments/1553902337108475995/1559109874359476286/20261011_160628.jpg?ex=6ad27ef8&is=6ad12d78&hm=97a6abc38dfb6b536edfb82ec44ef41e078711d4763511665fc8fdbc4bcb2c2a&",
+                  "alt": "20261011_160628.jpg"
+                },
+                {
+                  "src": "https://cdn.discordapp.com/attachments/1553902337108475995/1559109874758066287/20261011_160823.jpg?ex=6ad27ef9&is=6ad12d79&hm=da7f0f15bcb26d27373933ea9772392115295703ebbfe79e2713304c33daca3e&",
+                  "alt": "20261011_160823.jpg"
+                }
+              ],
+              "videos": [],
+              "reactions": [],
+              "comments": []
+            }
+          ]
+        },
+        {
+          "messages": [
+            {
+              "id": "1559209382284365824",
+              "isoTime": "2026-10-12T14:21:25.446000+00:00",
+              "bst": "15:21 BST",
+              "hkt": "22:21 HKT",
+              "body": "<@694331381702197300> emacs user spotted <:skulk:1534514985487565020>",
+              "images": [
+                {
+                  "src": "https://cdn.discordapp.com/attachments/1553902337108475995/1559209381545906246/20261012_152054.jpg?ex=6ad2dba5&is=6ad18a25&hm=ddae31e3edd29ac1242f0407d5fabaa14d9e7482100adbed903473a8d73f4185&",
+                  "alt": "20261012_152054.jpg"
+                }
+              ],
+              "videos": [],
+              "reactions": [
+                {
+                  "label": ":💬:",
+                  "emoji": "💬",
+                  "image": null,
+                  "count": 1
+                },
+                {
+                  "label": ":🗣️:",
+                  "emoji": "🗣️",
+                  "image": null,
+                  "count": 1
+                },
+                {
+                  "label": ":Emoji_Shockleft:",
+                  "emoji": "Emoji_Shockleft",
+                  "image": "https://cdn.discordapp.com/emojis/1350093590377791498.webp?size=64&quality=lossless",
+                  "count": 1
+                }
+              ],
+              "comments": []
+            }
+          ]
+        },
+        {
+          "messages": [
+            {
+              "id": "1559251641797050462",
+              "isoTime": "2026-10-12T17:09:20.899000+00:00",
+              "bst": "18:09 BST",
+              "hkt": "01:09 HKT",
+              "body": "my first rev solved without ai writing solve script‼️ (challenge from my sch ctf, the point system is flawed asf <:kekw:778988866228453437>)",
+              "images": [
+                {
+                  "src": "https://cdn.discordapp.com/attachments/1553902337108475995/1559251641683939378/image.png?ex=6ad25a40&is=6ad108c0&hm=f7023b151b6fb8433e17cd3c69cfc341dceabcaf34b16ab01f2c0b40fa2968b8&",
+                  "alt": "image.png"
+                }
+              ],
+              "videos": [],
+              "reactions": [
+                {
+                  "label": ":🔥:",
+                  "emoji": "🔥",
+                  "image": null,
+                  "count": 6
+                },
+                {
+                  "label": ":🐶:",
+                  "emoji": "🐶",
+                  "image": null,
+                  "count": 1
+                }
+              ],
+              "comments": []
+            }
+          ]
+        },
+        {
+          "messages": [
+            {
+              "id": "1559251881627353089",
+              "isoTime": "2026-10-12T17:10:18.079000+00:00",
+              "bst": "18:10 BST",
+              "hkt": "01:10 HKT",
+              "body": "it was at least a 400 point chall (at least to me)",
+              "images": [],
+              "videos": [],
+              "reactions": [],
+              "comments": []
+            }
+          ]
+        }
+      ]
+    },
+    {
       "isoDate": "2026-10-11",
       "date": "Oct 11 (Sun)",
       "clusters": [
@@ -1067,11 +1240,7 @@
               "videos": [],
               "reactions": [],
               "comments": []
-            }
-          ]
-        },
-        {
-          "messages": [
+            },
             {
               "id": "1554798206867611678",
               "isoTime": "2026-09-30T10:12:59.271000+00:00",
@@ -1161,11 +1330,7 @@
               "videos": [],
               "reactions": [],
               "comments": []
-            }
-          ]
-        },
-        {
-          "messages": [
+            },
             {
               "id": "1554465739400937512",
               "isoTime": "2026-09-29T12:11:52.850000+00:00",
@@ -1549,11 +1714,7 @@
               "videos": [],
               "reactions": [],
               "comments": []
-            }
-          ]
-        },
-        {
-          "messages": [
+            },
             {
               "id": "1554192332755181651",
               "isoTime": "2026-09-28T18:05:27.626000+00:00",
