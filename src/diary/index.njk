@@ -1,0 +1,173 @@
+---
+layout: base.njk
+title: diary | youstube
+description: My daily-ish diary studying abroad :D
+bodyClass: diary-page
+permalink: /diary/index.html
+---
+
+<section class="diary" aria-labelledby="diary-title">
+    <div class="diary-header">
+        <p class="diary-label">{{ diary.label }}</p>
+        <h1 id="diary-title">diary</h1>
+        <p class="diary-summary">{{ diary.summary }}</p>
+    </div>
+
+    <ol class="diary-days">
+        {% for day in diary.days %}
+        <li class="diary-day">
+            <h2 class="diary-day-heading">
+                <span class="diary-day-decoration" aria-hidden="true">~~~~</span>
+                <time datetime="{{ day.isoDate }}">{{ day.date }}</time>
+                <span class="diary-day-decoration" aria-hidden="true">~~~~</span>
+            </h2>
+
+            <ol class="diary-clusters">
+                {% for cluster in day.clusters %}
+                <li class="diary-cluster">
+                    <ol class="diary-messages">
+                        {% for message in cluster.messages %}
+                        <li class="diary-message">
+                            <article>
+                                <div class="diary-message-copy">
+                                    <div class="diary-times">
+                                        <time datetime="{{ message.isoTime }}">
+                                            <span class="diary-clock diary-clock--primary">{{ message.bst }}</span>
+                                            <span class="diary-time-divider" aria-hidden="true">/</span>
+                                            <span class="diary-clock">{{ message.hkt }}</span>
+                                        </time>
+                                    </div>
+
+                                    {% if message.body %}
+                                    <p class="diary-message-body">{{ message.body }}</p>
+                                    {% endif %}
+
+                                    {% if message.images.length or message.videos.length %}
+                                    <div class="media-gallery diary-gallery" aria-label="Attached diary media">
+                                        {% for video in message.videos %}
+                                        <figure class="media-gallery-item media-gallery-item--video" data-alt="{{ video.alt }}">
+                                            <video class="media-gallery-video" controls playsinline preload="metadata" aria-label="{{ video.alt }}">
+                                                <source src="{{ video.src }}" type="{{ video.type }}">
+                                            </video>
+                                        </figure>
+                                        {% endfor %}
+
+                                        {% for image in message.images %}
+                                        <figure class="media-gallery-item" data-original-src="{{ image.src }}" data-alt="{{ image.alt }}">
+                                            <button class="media-gallery-open" type="button" aria-label="Enlarge {{ image.alt }}">
+                                                <img src="{{ image.src }}" alt="{{ image.alt }}" loading="lazy" decoding="async">
+                                            </button>
+                                        </figure>
+                                        {% endfor %}
+                                    </div>
+                                    {% endif %}
+
+                                    {% if message.comments.length %}
+                                    <section class="diary-comments" aria-label="{{ message.comments.length }} replies">
+                                        <details class="diary-comment-disclosure">
+                                            <summary class="diary-comments-toggle" aria-label="Toggle {{ message.comments.length }} comments">
+                                                <span class="diary-comments-view" aria-hidden="true">View {{ message.comments.length }} {% if message.comments.length === 1 %}comment{% else %}comments{% endif %}</span>
+                                                <span class="diary-comments-hide" aria-hidden="true">Hide {{ message.comments.length }} {% if message.comments.length === 1 %}comment{% else %}comments{% endif %}</span>
+                                            </summary>
+                                            <ol class="diary-comment-list">
+                                                {% for comment in message.comments %}
+                                                <li class="diary-comment">
+                                                    {% if comment.author.avatar %}
+                                                    <img class="diary-comment-avatar" src="{{ comment.author.avatar }}" alt="" width="32" height="32" loading="lazy" decoding="async">
+                                                    {% else %}
+                                                    <span class="diary-comment-avatar diary-comment-avatar--fallback" aria-hidden="true">{{ comment.author.initial }}</span>
+                                                    {% endif %}
+
+                                                    <article class="diary-comment-copy">
+                                                        <div class="diary-comment-meta">
+                                                            <span class="diary-comment-author">{{ comment.author.name }}</span>
+                                                            <time datetime="{{ comment.isoTime }}">
+                                                                <span class="diary-clock diary-clock--primary">{{ comment.bst }}</span>
+                                                                <span class="diary-time-divider" aria-hidden="true">/</span>
+                                                                <span class="diary-clock">{{ comment.hkt }}</span>
+                                                            </time>
+                                                        </div>
+
+                                                        {% if comment.body %}
+                                                        <p class="diary-comment-body">{{ comment.body }}</p>
+                                                        {% endif %}
+
+                                                        {% if comment.images.length or comment.videos.length %}
+                                                        <div class="media-gallery diary-gallery diary-comment-gallery" aria-label="Media attached to {{ comment.author.name }}'s reply">
+                                                            {% for video in comment.videos %}
+                                                            <figure class="media-gallery-item media-gallery-item--video" data-alt="{{ video.alt }}">
+                                                                <video class="media-gallery-video" controls playsinline preload="metadata" aria-label="{{ video.alt }}">
+                                                                    <source src="{{ video.src }}" type="{{ video.type }}">
+                                                                </video>
+                                                            </figure>
+                                                            {% endfor %}
+
+                                                            {% for image in comment.images %}
+                                                            <figure class="media-gallery-item" data-original-src="{{ image.src }}" data-alt="{{ image.alt }}">
+                                                                <button class="media-gallery-open" type="button" aria-label="Enlarge {{ image.alt }}">
+                                                                    <img src="{{ image.src }}" alt="{{ image.alt }}" loading="lazy" decoding="async">
+                                                                </button>
+                                                            </figure>
+                                                            {% endfor %}
+                                                        </div>
+                                                        {% endif %}
+
+                                                        {% if comment.reactions.length %}
+                                                        <ul class="diary-comment-reactions" aria-label="Reactions to {{ comment.author.name }}'s reply">
+                                                            {% for reaction in comment.reactions %}
+                                                            <li class="diary-reaction" aria-label="{{ reaction.label }}: {{ reaction.count }} reactions">
+                                                                {% if reaction.image %}
+                                                                <img src="{{ reaction.image }}" alt="{{ reaction.label }}" width="22" height="22" loading="lazy" decoding="async">
+                                                                {% else %}
+                                                                <span class="diary-reaction-unicode" aria-hidden="true">{{ reaction.emoji }}</span>
+                                                                {% endif %}
+                                                                <span class="diary-reaction-count">{{ reaction.count }}</span>
+                                                            </li>
+                                                            {% endfor %}
+                                                        </ul>
+                                                        {% endif %}
+                                                    </article>
+                                                </li>
+                                                {% endfor %}
+                                            </ol>
+                                        </details>
+                                    </section>
+                                    {% endif %}
+                                </div>
+
+                                {% if message.reactions.length %}
+                                <aside class="diary-reactions" aria-label="Reactions to this message">
+                                    <ul class="diary-reaction-list">
+                                        {% for reaction in message.reactions %}
+                                        <li class="diary-reaction" aria-label="{{ reaction.label }}: {{ reaction.count }} reactions">
+                                            {% if reaction.image %}
+                                            <img src="{{ reaction.image }}" alt="{{ reaction.label }}" width="22" height="22" loading="lazy" decoding="async">
+                                            {% else %}
+                                            <span class="diary-reaction-unicode" aria-hidden="true">{{ reaction.emoji }}</span>
+                                            {% endif %}
+                                            <span class="diary-reaction-count">{{ reaction.count }}</span>
+                                        </li>
+                                        {% endfor %}
+                                    </ul>
+                                </aside>
+                                {% endif %}
+                            </article>
+                        </li>
+                        {% endfor %}
+                    </ol>
+                </li>
+                {% endfor %}
+            </ol>
+
+            {% if not loop.last %}
+            <p class="diary-day-divider" aria-hidden="true">
+                <span class="diary-day-divider-desktop">~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</span>
+                <span class="diary-day-divider-mobile">~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</span>
+            </p>
+            {% endif %}
+        </li>
+        {% endfor %}
+    </ol>
+</section>
+
+<script src="/scripts/media-gallery.js?v={{ assetVersion }}" defer></script>

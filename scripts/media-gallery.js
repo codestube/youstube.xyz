@@ -1,6 +1,7 @@
 (() => {
     const content = document.querySelector(".post-content");
-    if (!content) return;
+    const diaryGalleries = document.querySelectorAll(".diary-gallery");
+    if (!content && !diaryGalleries.length) return;
 
     const isWhitespace = (node) => node?.nodeType === Node.TEXT_NODE && !node.textContent.trim();
     const isCaption = (node) => node?.nodeType === Node.ELEMENT_NODE && node.tagName === "SMALL";
@@ -170,6 +171,95 @@
         });
     }
 
+    function replaceDiscordEmojiShortcodes() {
+        const roots = document.querySelectorAll(".diary-message-body, .diary-comment-body");
+        roots.forEach((root) => {
+            const walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT, {
+                acceptNode(node) {
+                    if (!node.textContent.includes("<")) return NodeFilter.FILTER_REJECT;
+                    if (node.parentElement?.closest("code, pre, script, style")) return NodeFilter.FILTER_REJECT;
+                    return NodeFilter.FILTER_ACCEPT;
+                }
+            });
+            const textNodes = [];
+            let node;
+            while ((node = walker.nextNode())) textNodes.push(node);
+
+            textNodes.forEach((textNode) => {
+                const shortcodePattern = /<(a?):([A-Za-z0-9_+-]+):(\d+)>/g;
+                const fragment = document.createDocumentFragment();
+                const text = textNode.textContent;
+                let lastIndex = 0;
+                let replaced = false;
+                let match;
+
+                while ((match = shortcodePattern.exec(text))) {
+                    const shortcode = match[0];
+                    fragment.append(text.slice(lastIndex, match.index));
+                    const emoji = document.createElement("img");
+                    emoji.className = "inline-emoji";
+                    emoji.src = `https://cdn.discordapp.com/emojis/${match[3]}.webp?size=64&quality=lossless`;
+                    emoji.alt = `:${match[2]}:`;
+                    emoji.title = `:${match[2]}:`;
+                    emoji.draggable = false;
+                    emoji.decoding = "async";
+                    emoji.addEventListener("error", () => emoji.replaceWith(document.createTextNode(shortcode)), { once: true });
+                    fragment.append(emoji);
+                    lastIndex = match.index + shortcode.length;
+                    replaced = true;
+                }
+
+                if (!replaced) return;
+                fragment.append(text.slice(lastIndex));
+                textNode.replaceWith(fragment);
+            });
+        });
+    }
+
+    function replaceStrikethroughMarkup() {
+        const roots = document.querySelectorAll(".diary-message-body, .diary-comment-body");
+        roots.forEach((root) => {
+            const walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT, {
+                acceptNode(node) {
+                    if (!node.textContent.includes("~~")) return NodeFilter.FILTER_REJECT;
+                    if (node.parentElement?.closest("code, pre, script, style")) return NodeFilter.FILTER_REJECT;
+                    return NodeFilter.FILTER_ACCEPT;
+                }
+            });
+            const textNodes = [];
+            let node;
+            while ((node = walker.nextNode())) textNodes.push(node);
+
+            textNodes.forEach((textNode) => {
+                const text = textNode.textContent;
+                const pattern = /~~([^~]+)~~/g;
+                const fragment = document.createDocumentFragment();
+                let lastIndex = 0;
+                let replaced = false;
+                let match;
+
+                while ((match = pattern.exec(text))) {
+                    fragment.append(text.slice(lastIndex, match.index));
+                    const deleted = document.createElement("del");
+                    deleted.textContent = match[1];
+                    fragment.append(deleted);
+                    lastIndex = match.index + match[0].length;
+                    replaced = true;
+                }
+
+                if (!replaced) return;
+                fragment.append(text.slice(lastIndex));
+                textNode.replaceWith(fragment);
+            });
+        });
+    }
+
+    function setupInlineVideos() {
+        document.querySelectorAll(".media-gallery-video, .diary-video").forEach((video) => {
+            video.volume = 0.5;
+        });
+    }
+
     function applyLayout(gallery) {
         const items = [...gallery.querySelectorAll(":scope > .media-gallery-item")];
         const visibleCount = Math.min(items.length, 4);
@@ -178,9 +268,26 @@
             const more = document.createElement("span");
             more.className = "media-gallery-more";
             more.textContent = `+${items.length - 4}`;
-            items[3].querySelector(".media-gallery-open").append(more);
+            const moreHost = [...items.slice(0, visibleCount)].reverse().find((item) => item.querySelector(".media-gallery-open"))?.querySelector(".media-gallery-open") || items[visibleCount - 1];
+            moreHost.append(more);
         }
-        items.forEach((item, index) => item.querySelector("button").addEventListener("click", () => openViewer(items, index)));
+        items.forEach((item, index) => {
+            const button = item.querySelector("button");
+            const image = button?.querySelector("img");
+            if (!button || !image) return;
+            const markUnavailable = () => {
+                if (button.classList.contains("media-gallery-open--unavailable")) return;
+                button.disabled = true;
+                button.classList.add("media-gallery-open--unavailable");
+                button.textContent = "media unavailable from Discord";
+            };
+
+            image.addEventListener("error", markUnavailable, { once: true });
+            if (image.complete && !image.naturalWidth) markUnavailable();
+            button.addEventListener("click", () => {
+                if (!button.disabled) openViewer(items, index);
+            });
+        });
     }
 
     const viewer = document.createElement("dialog");
@@ -267,8 +374,16 @@
     });
     viewer.addEventListener("close", () => { viewerImage.removeAttribute("src"); });
 
-    [...content.querySelectorAll("p")].forEach(transformParagraph);
-    mergeAdjacentGalleries();
-    [...content.querySelectorAll(".media-gallery")].forEach(applyLayout);
-    replaceEmojiShortcodes();
+    if (content) {
+        [...content.querySelectorAll("p")].forEach(transformParagraph);
+        mergeAdjacentGalleries();
+        replaceEmojiShortcodes();
+    }
+    replaceDiscordEmojiShortcodes();
+    replaceStrikethroughMarkup();
+    setupInlineVideos();
+    const galleries = content
+        ? [...content.querySelectorAll(".media-gallery"), ...diaryGalleries]
+        : [...diaryGalleries];
+    galleries.forEach(applyLayout);
 })();
