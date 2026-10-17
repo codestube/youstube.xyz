@@ -3,6 +3,148 @@
   "summary": "My daily-ish diary studying abroad :D",
   "days": [
     {
+      "isoDate": "2026-10-17",
+      "date": "Oct 17 (Sat)",
+      "clusters": [
+        {
+          "messages": [
+            {
+              "id": "1561126567273570407",
+              "isoTime": "2026-10-17T21:19:37.967000+00:00",
+              "bst": "22:19 BST",
+              "hkt": "05:19 HKT",
+              "body": "day 19 i js played minecraft, ate pizza and a burger for lunch and dinner. w 0 money spent",
+              "images": [],
+              "videos": [],
+              "reactions": [],
+              "comments": []
+            }
+          ]
+        },
+        {
+          "messages": [
+            {
+              "id": "1561146650687307838",
+              "isoTime": "2026-10-17T22:39:26.226000+00:00",
+              "bst": "23:39 BST",
+              "hkt": "06:39 HKT",
+              "body": "day 20\n1st time playing ctf with teammates in person (idk how i never did this in 1.5y in hk :) )\nand playing with afnom team and other ppl :p\nvibes were high, we had pizza during it\ntime currently is 2336 and were still working on some challs! \npersonally solved a bit for the team to prove im better at osint <:skulk:1534514985487565020> but its all fun banter <:kekw:778988866228453437>\nokay idk ctf day yippie!",
+              "images": [
+                {
+                  "src": "https://cdn.discordapp.com/attachments/1553902337108475995/1561146649533882458/20261017_181605.jpg?ex=6ad54a9d&is=6ad3f91d&hm=08ab01bf9c8dcdd830c846031d2fa2200b7be495103aefc2b4eb20f2b3cfb183&",
+                  "alt": "20261017_181605.jpg"
+                },
+                {
+                  "src": "https://cdn.discordapp.com/attachments/1553902337108475995/1561146650033135626/20261017_233352.jpg?ex=6ad54a9e&is=6ad3f91e&hm=a07218998f108d2609d3c9da30bd6b84da797d9bf87f4d22901e7024755c89f3&",
+                  "alt": "20261017_233352.jpg"
+                },
+                {
+                  "src": "https://cdn.discordapp.com/attachments/1553902337108475995/1561146650380992653/image-39.png?ex=6ad54a9e&is=6ad3f91e&hm=e97d20c0b490f998a28de91f82838bc18904ad716dcb35493eff7e60634e3032&",
+                  "alt": "image-39.png"
+                }
+              ],
+              "videos": [],
+              "reactions": [],
+              "comments": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "isoDate": "2026-10-16",
+      "date": "Oct 16 (Fri)",
+      "clusters": [
+        {
+          "messages": [
+            {
+              "id": "1560615984862077139",
+              "isoTime": "2026-10-16T11:30:45.634000+00:00",
+              "bst": "12:30 BST",
+              "hkt": "19:30 HKT",
+              "body": "wtf geeg i cant use insta now after the story <:skulk:1534514985487565020>",
+              "images": [
+                {
+                  "src": "https://cdn.discordapp.com/attachments/1553902337108475995/1560615984094773329/Screenshot_20261016_123002_Instagram.jpg?ex=6ad556a5&is=6ad40525&hm=9bbd76954e61682b9318146d03d44ada1f9f3addc375faba0810dd75fb9d271f&",
+                  "alt": "Screenshot_20261016_123002_Instagram.jpg"
+                }
+              ],
+              "videos": [],
+              "reactions": [
+                {
+                  "label": ":🤖:",
+                  "emoji": "🤖",
+                  "image": null,
+                  "count": 3
+                }
+              ],
+              "comments": []
+            }
+          ]
+        },
+        {
+          "messages": [
+            {
+              "id": "1560675290726801579",
+              "isoTime": "2026-10-16T15:26:25.254000+00:00",
+              "bst": "16:26 BST",
+              "hkt": "23:26 HKT",
+              "body": "okay idk what day im on anymore so i'm just gonna summarize what i did these few days\nday 15~18 (i think <:skulk:1534514985487565020>) oct 12-15\nso on day 15, nothing really happened to be honest. i was playing minecraft (my smp server, please join guys :c) and suddenly fire alarm went off, but usually its a false alarm as the smoke alarm is quite easily triggered by just cooking, so i ignored it for a bit until it got too annoying\nso i went out and looked outside to see everyone standing at the meetup point, only to realise that there was actual huge smoke coming from a flat's kitchen\ntill this day i dont know what happened, but there was a lot of smoke in the kitchen, and people kept just watching and saying that their kitchen was so big (dimension wise it's larger than others)\nthen I went back and cooked spaghetti for dinner, so <a:yippee:1514418095048101968> \n\nday 16 was a quiz / test day on the database course, it was just 10 mc questions with knowledge on postgresql and jdl stuff. i got 9/10 on the test so id say it wasnt that bad. after the test i went to my friends dorm and ate noodles for lunch break (w friend). \non my way home my flatmate asked if i wanted to get a burger, a slutty burger he adds. and i was hooked by the name, and was kinda intrigued by how slutty it could be, so i said sure lemme get one. he ended up getting  a slutty burger for me and a smash me daddy burger for himself. it was a good burger to say the least, and i ate it for my dinner. w burger names. also i ak'd the steg category in the afnom ctf in 3am (it wasn't that hard, js bored <:skulk:1534514985487565020>)\n\nday 17 was wednesday i believe, where i have no lesson, but wanted to join the web hacking session hosted by afnom (the ctf team here), and met a lot of new people! There was this person from taiwan, and studying pharmacy, being here in the session 😭 she said she just wanted to learn more about it and looked kinda interesting! it was so crazy. anyway i ended up playing a few of the web challenges on the afnom ctf while others did the [natas challenges](https://overthewire.org/wargames/natas/). it was a blast, and after the session ended, i went to the pub session afterwards and grab my first actual (half)pint of alcohol introduced by the leader of afnom. we had fun chatting while I was just basically solving challenges recommended by the members there, and talk around and meeting new faces :D didnt take any photos that day so nothing to show but i had a lot of fun with them\n\nday 18 i woke up late and missed the lecture, but there was an event called missing semester, where they would have ppl teaching stuff about advanced topics within CS. I invited my friend to come swing by and have a listen as well since hes not really familiar with cs stuff like linux and whatnot. the session went pretty well, and i went to grocery shop down at s'oak, and grab myself a frozen pizza from sainsbury. i also bought a can of pink monster, not knowing that I needed ID for that ??? I still dont understand why do I need an ID for buying monster energy drink, but the cashier told me that the uni id was good enough with my photo and dob, so all good. I did not want to cook that night tho, so i js drank like 2 bottle of milk + a bowl of cereal for dinner. lets just say the toilet didnt like it :> I also ended up staying up till 7am this morning to finish making this diary sync to my [website](https://youstube.xyz/diary/) (as suggested by @\\nelson, thank you :D), and so I missed another lecture and woke up pretty late, only to realize that my instagram had bot behaviour now and got shadow banned?? Is it mandatory to show my face for the verification selfie... :c It's not even a region-based thing since my account is inaccessible to others and myself right now... i'll figure something out\n\nanyways hopefully i fix my sleep schedule sooner or later and my instagram account as well\nalso also also guys please join my minecraft server and play together plsplspls tks",
+              "images": [],
+              "videos": [],
+              "reactions": [],
+              "comments": []
+            },
+            {
+              "id": "1560675696706068593",
+              "isoTime": "2026-10-16T15:28:02.047000+00:00",
+              "bst": "16:28 BST",
+              "hkt": "23:28 HKT",
+              "body": "",
+              "images": [
+                {
+                  "src": "https://cdn.discordapp.com/attachments/1553902337108475995/1560675694835531876/20261012_205618.jpg?ex=6ad4e581&is=6ad39401&hm=0238c2c5b698ea2ddd03b4d42338b601075a4174444ad2000e08e63d6501b027&",
+                  "alt": "20261012_205618.jpg"
+                },
+                {
+                  "src": "https://cdn.discordapp.com/attachments/1553902337108475995/1560675695275810948/20261013_132959.jpg?ex=6ad4e581&is=6ad39401&hm=69d8bec3326a706f3ff65065b751b90cba264cbcd029fcfc17233da98ba54081&",
+                  "alt": "20261013_132959.jpg"
+                },
+                {
+                  "src": "https://cdn.discordapp.com/attachments/1553902337108475995/1560675695657619546/20261013_205201.jpg?ex=6ad4e581&is=6ad39401&hm=286d21e710763e117c0d309e1150826d535af70c29eeb194dc2c1219d851736d&",
+                  "alt": "20261013_205201.jpg"
+                },
+                {
+                  "src": "https://cdn.discordapp.com/attachments/1553902337108475995/1560675695959474226/image-30.png?ex=6ad4e581&is=6ad39401&hm=252d05995bf7a2d1e577d0bc9827b3bd0062c07fbcc7914f10cfbd889a702c48&",
+                  "alt": "image-30.png"
+                },
+                {
+                  "src": "https://cdn.discordapp.com/attachments/1553902337108475995/1560675696399880252/IMG-20261016-WA0004.jpg?ex=6ad4e581&is=6ad39401&hm=572d10e01e0460b6721f18c21fc02c18952a31e8693c4fcc616bb5c094f89d20&",
+                  "alt": "IMG-20261016-WA0004.jpg"
+                }
+              ],
+              "videos": [
+                {
+                  "src": "https://cdn.discordapp.com/attachments/1553902337108475995/1560675694218977420/20261012_200801.mp4?ex=6ad4e581&is=6ad39401&hm=161716eec7d185fe31b3b9b913737ca0436e4e3de934c59fe517867093aa85c1&",
+                  "type": "video/mp4",
+                  "alt": "20261012_200801.mp4"
+                }
+              ],
+              "reactions": [
+                {
+                  "label": ":🔥:",
+                  "emoji": "🔥",
+                  "image": null,
+                  "count": 1
+                }
+              ],
+              "comments": []
+            }
+          ]
+        }
+      ]
+    },
+    {
       "isoDate": "2026-10-15",
       "date": "Oct 15 (Thu)",
       "clusters": [
