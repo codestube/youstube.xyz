@@ -3,6 +3,82 @@
   "summary": "My daily-ish diary studying abroad :D",
   "days": [
     {
+      "isoDate": "2026-10-19",
+      "date": "Oct 19 (Mon)",
+      "clusters": [
+        {
+          "messages": [
+            {
+              "id": "1561549585606910074",
+              "isoTime": "2026-10-19T01:20:33.397000+00:00",
+              "bst": "02:20 BST",
+              "hkt": "09:20 HKT",
+              "body": "day 21 (week3)\nits currently 2:07 am, and me and some of my teammates are js chilling after playing our first ctf together\nwe couldnt go back because the rain were too big <:skulk:1534514985487565020> anywho, my team AFNOM > MONFA 🔥\nthe best player on our team apparently was his first time joining a ctf... im cooked\nand our team were the most well-rounded, and i end up just shy of full solving the OSINT cat by 1 chall...\nI might consider making a writeup for some of the challenges and have it be shared on my blog and afnom's, but we'll see\nI need to get some sleep here, cuz im very hungry right now and theres nothing to eat at this time of day 😭 im surviving on actual nothing right now so this will be a good opportunity for me to fast and eat more next meal or something :D\n\nAlso what a fast 3 weeks this has been, I would say I'm learning to talk to ppl here, have some decent conversational skills like people will unintentionally ignore you cuz all people will just talk over each other. my brain is still slowly adapting to this style of chatting, and less overstimulated when everyones js talking <:thumbsUp:640558684807757854>  I also hope that I catch up with my courses and actually do good at them cuz I feel like im already not understanding any single thing with the modules as they dont have assignments to work on and its all just problem sheet that we can reference to. so idk, maybe i'll lock in for a bit this month and the next before christmas, then try to have some fun with other friends and scholars. I do want to try and go around UK / EU and see what else the world has to offer, maybe even fixing my sleep schedule during that <:kekw:778988866228453437> All in all it has been an very eventful week for me, and I hope anyone thats reading this is having a good one too!! <a:yippee:1514418095048101968>",
+              "images": [
+                {
+                  "src": "https://media.youstube.xyz/diary/images/1561549583904014488-afnom.png",
+                  "alt": "afnom.png"
+                },
+                {
+                  "src": "https://media.youstube.xyz/diary/images/1561549584495542392-monfa.png",
+                  "alt": "monfa.png"
+                },
+                {
+                  "src": "https://media.youstube.xyz/diary/images/1561549585095065771-aftermath.jpg",
+                  "alt": "aftermath.jpg"
+                }
+              ],
+              "videos": [],
+              "reactions": [],
+              "comments": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "isoDate": "2026-10-18",
+      "date": "Oct 18 (Sun)",
+      "clusters": [
+        {
+          "messages": [
+            {
+              "id": "1561256134864535562",
+              "isoTime": "2026-10-18T05:54:29.288000+00:00",
+              "bst": "06:54 BST",
+              "hkt": "13:54 HKT",
+              "body": "playing pool at 6 in the morning",
+              "images": [
+                {
+                  "src": "https://media.youstube.xyz/diary/images/1561256134675927100-20261018_061918.jpg",
+                  "alt": "20261018_061918.jpg"
+                }
+              ],
+              "videos": [],
+              "reactions": [],
+              "comments": []
+            },
+            {
+              "id": "1561256535651258368",
+              "isoTime": "2026-10-18T05:56:04.843000+00:00",
+              "bst": "06:56 BST",
+              "hkt": "13:56 HKT",
+              "body": "seeing cats at 7",
+              "images": [
+                {
+                  "src": "https://media.youstube.xyz/diary/images/1561256535399862303-20261018_065430.jpg",
+                  "alt": "20261018_065430.jpg"
+                }
+              ],
+              "videos": [],
+              "reactions": [],
+              "comments": []
+            }
+          ]
+        }
+      ]
+    },
+    {
       "isoDate": "2026-10-17",
       "date": "Oct 17 (Sat)",
       "clusters": [
@@ -44,7 +120,14 @@
                 }
               ],
               "videos": [],
-              "reactions": [],
+              "reactions": [
+                {
+                  "label": ":🔥:",
+                  "emoji": "🔥",
+                  "image": null,
+                  "count": 2
+                }
+              ],
               "comments": []
             }
           ]
