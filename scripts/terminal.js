@@ -47,11 +47,11 @@ $(document).ready(function() {
             "contact.md": file([
                 // gng codex did NOT cook on formats wtf
                 // "discord.txt": file("DM me @youtubeshort"),
-                // "email.txt": file("[[!;;]youstube@flagaholic.hk]"),
+                // "email.txt": file("[[!;;]yst@flagaholic.hk]"),
                 // "github.txt": file("[[!;;]https://github.com/codestube]"),
                 // "x.txt": file("[[!;;]https://x.com/codestube]")
                 "# Find me onnnnnn",
-                "[Email]     [[!;;]youstube@flagaholic.hk]",
+                "[Email]     [[!;;]yst@flagaholic.hk]",
                 "[Discord]   DM me @youtubeshort",
                 "[X]         [[!;;]https://x.com/codestube]",
                 "[GitHub]    [[!;;]https://github.com/codestube]",
